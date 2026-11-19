@@ -14,9 +14,8 @@
      undo the last change, or paste the file into jsonlint.com from the first { to the last }.
    ===================================================================================== */
 window.TII_DB = {
-
   /* ---- meta ----
-     Titles, edition label, data date and citation. "overview" is the four-sentence summary under the overall score; {tii}, {trade}, {industry}, {investment} and a domain id such as {5.2.2a} are replaced with the live scores. */
+  Titles, edition label, data date and citation. "overview" is the four-sentence summary under the overall score; {tii}, {trade}, {industry}, {investment} and a domain id such as {5.2.2a} are replaced with the live scores. */
   "meta": {
     "title": "Trade, Industry & Investment",
     "edition": "2026",
@@ -25,374 +24,1275 @@ window.TII_DB = {
     "publisher": "National Competitiveness Commission",
     "source": "NCC calculations based on the ZCR 2026 Scoring Framework.",
     "citation": "National Competitiveness Commission (2026). Zimbabwe Competitiveness Report 2026: Trade, Industry and Investment. Harare: NCC.",
-    "overview": ["Zimbabwe scores {tii} out of 100 for trade, industry and investment competitiveness, with Trade ({trade}) ahead of Investment ({investment}) and Industry ({industry}).", "The score is lifted by the systems that administer trade and investment: Trade Facilitation ({5.1.3}), Investment Performance ({5.3.1a}), Investment Facilitation ({5.3.2}) and Standards ({5.1.5}) all score above 70.", "It is held back by productive outcomes, where Value Addition ({5.2.2a}), Pipeline and Conversion ({5.3.1b}) and Repatriation and Retention ({5.3.1c}) are the three weakest domains.", "Export earnings grew strongly but rest largely on gold, so further gains depend on diversifying exports, processing more output locally and turning approved investment into operating capacity."]
+    "overview": [
+      "Zimbabwe scores {tii} out of 100 for trade, industry and investment competitiveness, with Trade ({trade}) ahead of Investment ({investment}) and Industry ({industry}).",
+      "The score is lifted by the systems that administer trade and investment: Trade Facilitation ({5.1.3}), Investment Performance ({5.3.1a}), Investment Facilitation ({5.3.2}) and Standards ({5.1.5}) all score above 70.",
+      "It is held back by productive outcomes, where Value Addition ({5.2.2a}), Pipeline and Conversion ({5.3.1b}) and Repatriation and Retention ({5.3.1c}) are the three weakest domains.",
+      "Export earnings grew strongly but rest largely on gold, so further gains depend on diversifying exports, processing more output locally and turning approved investment into operating capacity."
+    ]
   },
 
   /* ---- pillars ----
-     The three pillars. "key" is the page address (#trade, #industry, #investment). */
+  The three pillars. "key" is the page address (#trade, #industry, #investment). */
   "pillars": [
-    {"id": "5.1", "key": "trade", "name": "Trade Competitiveness", "role": "Outward market gate"},
-    {"id": "5.2", "key": "industry", "name": "Industry Competitiveness", "role": "Domestic production engine"},
-    {"id": "5.3", "key": "investment", "name": "Investment Competitiveness", "role": "Capital enabler"}
+    {
+      "id": "5.1",
+      "key": "trade",
+      "name": "Trade Competitiveness",
+      "role": "Outward market gate"
+    },
+    {
+      "id": "5.2",
+      "key": "industry",
+      "name": "Industry Competitiveness",
+      "role": "Domestic production engine"
+    },
+    {
+      "id": "5.3",
+      "key": "investment",
+      "name": "Investment Competitiveness",
+      "role": "Capital enabler"
+    }
   ],
 
   /* ---- domains ----
-     The fourteen scored domains. "short" is the label used in the comparison matrix. */
+  The fourteen scored domains. "short" is the label used in the comparison matrix. */
   "domains": [
-    {"id": "5.1.1", "name": "Export Performance", "pillar": "5.1", "short": "Exports"},
-    {"id": "5.1.2", "name": "Trade Balance and Resilience", "pillar": "5.1", "short": "Balance"},
-    {"id": "5.1.3", "name": "Trade Facilitation", "pillar": "5.1", "short": "Facilitation"},
-    {"id": "5.1.4", "name": "Market Access", "pillar": "5.1", "short": "Market access"},
-    {"id": "5.1.5", "name": "Standards and SPS", "pillar": "5.1", "short": "Standards"},
-    {"id": "5.2.1", "name": "Manufacturing Capability", "pillar": "5.2", "short": "Manufacturing"},
-    {"id": "5.2.2a", "name": "Value Addition", "pillar": "5.2", "short": "Value addition"},
-    {"id": "5.2.2b", "name": "Extractives and Beneficiation", "pillar": "5.2", "short": "Extractives"},
-    {"id": "5.2.3", "name": "Enterprise Environment and Innovation", "pillar": "5.2", "short": "Enterprise"},
-    {"id": "5.3.1a", "name": "Investment Performance", "pillar": "5.3", "short": "Performance"},
-    {"id": "5.3.1b", "name": "Pipeline and Conversion", "pillar": "5.3", "short": "Pipeline"},
-    {"id": "5.3.1c", "name": "Repatriation and Retention", "pillar": "5.3", "short": "Retention"},
-    {"id": "5.3.2", "name": "Investment Facilitation", "pillar": "5.3", "short": "Facilitation"},
-    {"id": "5.3.3a", "name": "Investment Structure", "pillar": "5.3", "short": "Structure"}
+    {
+      "id": "5.1.1",
+      "name": "Export Performance",
+      "pillar": "5.1",
+      "short": "Exports"
+    },
+    {
+      "id": "5.1.2",
+      "name": "Trade Balance and Resilience",
+      "pillar": "5.1",
+      "short": "Balance"
+    },
+    {
+      "id": "5.1.3",
+      "name": "Trade Facilitation",
+      "pillar": "5.1",
+      "short": "Facilitation"
+    },
+    {
+      "id": "5.1.4",
+      "name": "Market Access",
+      "pillar": "5.1",
+      "short": "Market access"
+    },
+    {
+      "id": "5.1.5",
+      "name": "Standards and SPS",
+      "pillar": "5.1",
+      "short": "Standards"
+    },
+    {
+      "id": "5.2.1",
+      "name": "Manufacturing Capability",
+      "pillar": "5.2",
+      "short": "Manufacturing"
+    },
+    {
+      "id": "5.2.2a",
+      "name": "Value Addition",
+      "pillar": "5.2",
+      "short": "Value addition"
+    },
+    {
+      "id": "5.2.2b",
+      "name": "Extractives and Beneficiation",
+      "pillar": "5.2",
+      "short": "Extractives"
+    },
+    {
+      "id": "5.2.3",
+      "name": "Enterprise Environment and Innovation",
+      "pillar": "5.2",
+      "short": "Enterprise"
+    },
+    {
+      "id": "5.3.1a",
+      "name": "Investment Performance",
+      "pillar": "5.3",
+      "short": "Performance"
+    },
+    {
+      "id": "5.3.1b",
+      "name": "Pipeline and Conversion",
+      "pillar": "5.3",
+      "short": "Pipeline"
+    },
+    {
+      "id": "5.3.1c",
+      "name": "Repatriation and Retention",
+      "pillar": "5.3",
+      "short": "Retention"
+    },
+    {
+      "id": "5.3.2",
+      "name": "Investment Facilitation",
+      "pillar": "5.3",
+      "short": "Facilitation"
+    },
+    {
+      "id": "5.3.3a",
+      "name": "Investment Structure",
+      "pillar": "5.3",
+      "short": "Structure"
+    }
   ],
 
   /* ---- topics ----
-     Colour-coded sections. "id" is the section anchor, "page" the page it sits on, "colour" any CSS colour. */
+  Colour-coded sections. "id" is the section anchor, "page" the page it sits on, "colour" any CSS colour. */
   "topics": [
-    {"id": "s-5-1-1", "page": "trade", "label": "Exports", "colour": "#2a78d6"},
-    {"id": "s-5-1-2", "page": "trade", "label": "Trade balance", "colour": "#0097a7"},
-    {"id": "s-5-1-3", "page": "trade", "label": "Border & customs", "colour": "#6250d6"},
-    {"id": "s-5-1-4", "page": "trade", "label": "Market access", "colour": "#d55181"},
-    {"id": "s-5-1-5", "page": "trade", "label": "Standards", "colour": "#7f9a1c"},
-    {"id": "s-5-2-1", "page": "industry", "label": "Manufacturing", "colour": "#2a78d6"},
-    {"id": "s-5-2-2a", "page": "industry", "label": "Value addition", "colour": "#e8875a"},
-    {"id": "s-gold", "page": "industry", "label": "Gold", "colour": "#d9a514"},
-    {"id": "s-5-2-2b", "page": "industry", "label": "Mineral beneficiation", "colour": "#0097a7"},
-    {"id": "s-5-2-3", "page": "industry", "label": "Power, finance & innovation", "colour": "#6250d6"},
-    {"id": "s-5-3-1a", "page": "investment", "label": "FDI & conversion", "colour": "#2a78d6"},
-    {"id": "s-5-3-1c", "page": "investment", "label": "Retention", "colour": "#0097a7"},
-    {"id": "s-5-3-2", "page": "investment", "label": "Licensing & facilitation", "colour": "#6250d6"},
-    {"id": "s-5-3-3a", "page": "investment", "label": "Sector & location", "colour": "#7f9a1c"}
+    {
+      "id": "s-5-1-1",
+      "page": "trade",
+      "label": "Exports",
+      "colour": "#2a78d6"
+    },
+    {
+      "id": "s-5-1-2",
+      "page": "trade",
+      "label": "Trade balance",
+      "colour": "#0097a7"
+    },
+    {
+      "id": "s-5-1-3",
+      "page": "trade",
+      "label": "Border & customs",
+      "colour": "#6250d6"
+    },
+    {
+      "id": "s-5-1-4",
+      "page": "trade",
+      "label": "Market access",
+      "colour": "#d55181"
+    },
+    {
+      "id": "s-5-1-5",
+      "page": "trade",
+      "label": "Standards",
+      "colour": "#7f9a1c"
+    },
+    {
+      "id": "s-5-2-1",
+      "page": "industry",
+      "label": "Manufacturing",
+      "colour": "#2a78d6"
+    },
+    {
+      "id": "s-5-2-2a",
+      "page": "industry",
+      "label": "Value addition",
+      "colour": "#e8875a"
+    },
+    {
+      "id": "s-gold",
+      "page": "industry",
+      "label": "Gold",
+      "colour": "#d9a514"
+    },
+    {
+      "id": "s-5-2-2b",
+      "page": "industry",
+      "label": "Mineral beneficiation",
+      "colour": "#0097a7"
+    },
+    {
+      "id": "s-5-2-3",
+      "page": "industry",
+      "label": "Power, finance & innovation",
+      "colour": "#6250d6"
+    },
+    {
+      "id": "s-5-3-1a",
+      "page": "investment",
+      "label": "FDI & conversion",
+      "colour": "#2a78d6"
+    },
+    {
+      "id": "s-5-3-1c",
+      "page": "investment",
+      "label": "Retention",
+      "colour": "#0097a7"
+    },
+    {
+      "id": "s-5-3-2",
+      "page": "investment",
+      "label": "Licensing & facilitation",
+      "colour": "#6250d6"
+    },
+    {
+      "id": "s-5-3-3a",
+      "page": "investment",
+      "label": "Sector & location",
+      "colour": "#7f9a1c"
+    }
   ],
 
   /* ---- quickFacts ----
-     The eight tiles in the Quick facts band. Keep the count a multiple of 4 so the grid stays full. */
+  The eight tiles in the Quick facts band. Keep the count a multiple of 4 so the grid stays full. */
   "quickFacts": [
-    {"label": "Goods exports", "value": "$9.71 bn", "note": "+30.2% on 2024"},
-    {"label": "Nominal GDP", "value": "$35.05 bn", "note": "2025"},
-    {"label": "Net FDI inflows", "value": "$380 mn", "note": "1.9% of GDP"},
-    {"label": "Current account", "value": "+6.0%", "note": "of GDP · $2.1 bn surplus"},
-    {"label": "Manufacturing value added", "value": "11.5%", "note": "of GDP · 12.9% in 2021"},
-    {"label": "Capacity utilisation", "value": "61.2%", "note": "up from 57.0%"},
-    {"label": "Gold export earnings", "value": "$4.61 bn", "note": "47% of goods exports"},
-    {"label": "Reserve cover", "value": "1.6 months", "note": "of imports"}
+    {
+      "label": "Goods exports",
+      "value": "$9.71 bn",
+      "note": "+30.2% on 2024"
+    },
+    {
+      "label": "Nominal GDP",
+      "value": "$35.05 bn",
+      "note": "2025"
+    },
+    {
+      "label": "Net FDI inflows",
+      "value": "$380 mn",
+      "note": "1.9% of GDP"
+    },
+    {
+      "label": "Current account",
+      "value": "+6.0%",
+      "note": "of GDP · $2.1 bn surplus"
+    },
+    {
+      "label": "Manufacturing value added",
+      "value": "11.5%",
+      "note": "of GDP · 12.9% in 2021"
+    },
+    {
+      "label": "Capacity utilisation",
+      "value": "61.2%",
+      "note": "up from 57.0%"
+    },
+    {
+      "label": "Gold export earnings",
+      "value": "$4.61 bn",
+      "note": "47% of goods exports"
+    },
+    {
+      "label": "Reserve cover",
+      "value": "1.6 months",
+      "note": "of imports"
+    }
   ],
 
   /* ---- keyFindings ----
-     The nine Key findings cards. "topic" is the id of the section the card links to. */
+  The nine Key findings cards. "topic" is the id of the section the card links to. */
   "keyFindings": [
-    {"title": "Administration leads performance", "text": "Trade facilitation scores 77.8 and investment facilitation 75.0, while export performance reaches only 43.8 and the conversion of licensed projects just 31.3.", "topic": "s-5-1-1"},
-    {"title": "Export growth rests on one metal", "text": "Gold delivered 92.6% of the 2025 rise in export earnings, and three commodities together generate 75.5% of receipts, leaving the base narrow and exposed.", "topic": "s-gold"},
-    {"title": "Value addition is the weakest link", "text": "Value addition scores 22.9, the lowest of the fourteen domains: processed agricultural exports reach only 0.14 for every 1 of raw exports leaving the country.", "topic": "s-5-2-2a"},
-    {"title": "Licences are not becoming capital", "text": "US$3.26 billion of licensed projects produced US$380 million of net foreign investment, a conversion rate of 11.7% once approvals reach operating capacity.", "topic": "s-5-3-1a"},
-    {"title": "Borders clear faster than peers", "text": "Export consignments clear customs in 3.3 days and imports in 2.6, against Sub-Saharan medians of 6.4 and 10.4 days, making the border a genuine strength.", "topic": "s-5-1-3"},
-    {"title": "Continental preferences go unused", "text": "97% of tariff lines sit in the AfCFTA schedule, yet preference utilisation stands at 0.00% and only 15 exporters hold authorised economic operator status.", "topic": "s-5-1-4"},
-    {"title": "Factories run well below capacity", "text": "Capacity utilisation is 61.2%, leaving two-fifths of plant idle, and medium- and high-technology goods make up only 9.5% of manufacturing value added here.", "topic": "s-5-2-1"},
-    {"title": "Capital enters fast, leaves slowly", "text": "A construction permit takes 6.7 days, the fastest among all peers, while dividend repatriation still takes 120 days against a regional 30-day benchmark.", "topic": "s-5-3-1c"},
-    {"title": "Unreliable power holds back industry", "text": "52.5% of formal firms report outages averaging 3.8 a month, and 78.3% of fixed assets are funded internally because bank credit reaches few manufacturers.", "topic": "s-5-2-3"}
+    {
+      "title": "Administration leads performance",
+      "text": "Trade facilitation scores 77.8 and investment facilitation 75.0, while export performance reaches only 43.8 and the conversion of licensed projects just 31.3.",
+      "topic": "s-5-1-1"
+    },
+    {
+      "title": "Export growth rests on one metal",
+      "text": "Gold delivered 92.6% of the 2025 rise in export earnings, and three commodities together generate 75.5% of receipts, leaving the base narrow and exposed.",
+      "topic": "s-gold"
+    },
+    {
+      "title": "Value addition is the weakest link",
+      "text": "Value addition scores 22.9, the lowest of the fourteen domains: processed agricultural exports reach only 0.14 for every 1 of raw exports leaving the country.",
+      "topic": "s-5-2-2a"
+    },
+    {
+      "title": "Licences are not becoming capital",
+      "text": "US$3.26 billion of licensed projects produced US$380 million of net foreign investment, a conversion rate of 11.7% once approvals reach operating capacity.",
+      "topic": "s-5-3-1a"
+    },
+    {
+      "title": "Borders clear faster than peers",
+      "text": "Export consignments clear customs in 3.3 days and imports in 2.6, against Sub-Saharan medians of 6.4 and 10.4 days, making the border a genuine strength.",
+      "topic": "s-5-1-3"
+    },
+    {
+      "title": "Continental preferences go unused",
+      "text": "97% of tariff lines sit in the AfCFTA schedule, yet preference utilisation stands at 0.00% and only 15 exporters hold authorised economic operator status.",
+      "topic": "s-5-1-4"
+    },
+    {
+      "title": "Factories run well below capacity",
+      "text": "Capacity utilisation is 61.2%, leaving two-fifths of plant idle, and medium- and high-technology goods make up only 9.5% of manufacturing value added here.",
+      "topic": "s-5-2-1"
+    },
+    {
+      "title": "Capital enters fast, leaves slowly",
+      "text": "A construction permit takes 6.7 days, the fastest among all peers, while dividend repatriation still takes 120 days against a regional 30-day benchmark.",
+      "topic": "s-5-3-1c"
+    },
+    {
+      "title": "Unreliable power holds back industry",
+      "text": "52.5% of formal firms report outages averaging 3.8 a month, and 78.3% of fixed assets are funded internally because bank credit reaches few manufacturers.",
+      "topic": "s-5-2-3"
+    }
   ],
 
   /* ---- kpis ----
-     Headline tiles shown at the top of each section: label, value, note and optional unit. */
+  Headline tiles shown at the top of each section: label, value, note and optional unit. */
   "kpis": {
     "export_value_2025": [
-      {"label": "Export value, 2025", "value": "$9.71", "note": "+30.2% on 2024", "unit": "bn"},
-      {"label": "4-year export CAGR", "value": "12.6%", "note": "SADC average 1.7%", "unit": ""},
-      {"label": "Top-3 commodity share", "value": "75.5%", "note": "Gold, nickel mattes, tobacco · reformer target &lt;60%", "unit": ""},
-      {"label": "Gold share of 2025 growth", "value": "92.6%", "note": "Non-gold exports added $0.165 bn", "unit": ""}
+      {
+        "label": "Export value, 2025",
+        "value": "$9.71",
+        "note": "+30.2% on 2024",
+        "unit": "bn"
+      },
+      {
+        "label": "4-year export CAGR",
+        "value": "12.6%",
+        "note": "SADC average 1.7%",
+        "unit": ""
+      },
+      {
+        "label": "Top-3 commodity share",
+        "value": "75.5%",
+        "note": "Gold, nickel mattes, tobacco · reformer target &lt;60%",
+        "unit": ""
+      },
+      {
+        "label": "Gold share of 2025 growth",
+        "value": "92.6%",
+        "note": "Non-gold exports added $0.165 bn",
+        "unit": ""
+      }
     ],
     "goods_trade_balance_2025": [
-      {"label": "Goods trade balance 2025", "value": "−$414", "note": "from −$2.10 bn in 2024", "unit": "mn"},
-      {"label": "Current account", "value": "+6.0%", "note": "of GDP · $2.1 bn surplus", "unit": ""},
-      {"label": "Reserve cover", "value": "1.6", "note": "months of imports · $1.6 bn", "unit": ""},
-      {"label": "Capital goods share of imports", "value": "18.3%", "note": "benchmark 25%", "unit": ""},
-      {"label": "Largest import source", "value": "37.6%", "note": "risk ceiling 50%", "unit": ""},
-      {"label": "Largest export destination", "value": "48.7%", "note": "UAE gold shipments", "unit": ""}
+      {
+        "label": "Goods trade balance 2025",
+        "value": "−$414",
+        "note": "from −$2.10 bn in 2024",
+        "unit": "mn"
+      },
+      {
+        "label": "Current account",
+        "value": "+6.0%",
+        "note": "of GDP · $2.1 bn surplus",
+        "unit": ""
+      },
+      {
+        "label": "Reserve cover",
+        "value": "1.6",
+        "note": "months of imports · $1.6 bn",
+        "unit": ""
+      },
+      {
+        "label": "Capital goods share of imports",
+        "value": "18.3%",
+        "note": "benchmark 25%",
+        "unit": ""
+      },
+      {
+        "label": "Largest import source",
+        "value": "37.6%",
+        "note": "risk ceiling 50%",
+        "unit": ""
+      },
+      {
+        "label": "Largest export destination",
+        "value": "48.7%",
+        "note": "UAE gold shipments",
+        "unit": ""
+      }
     ],
     "afcfta_preference_utilisation": [
-      {"label": "AfCFTA preference utilisation", "value": "0.00%", "note": "0.05% (≈$1.37 mn) lifts it off zero", "unit": ""},
-      {"label": "Tariff lines in AfCFTA schedule", "value": "97%", "note": "implementing SIs still in draft", "unit": ""},
-      {"label": "OSBP corridor coverage", "value": "100%", "note": "active corridors", "unit": ""},
-      {"label": "AEO certified exporters", "value": "15", "note": "Kenya 370 · South Africa 831", "unit": ""}
+      {
+        "label": "AfCFTA preference utilisation",
+        "value": "0.00%",
+        "note": "0.05% (≈$1.37 mn) lifts it off zero",
+        "unit": ""
+      },
+      {
+        "label": "Tariff lines in AfCFTA schedule",
+        "value": "97%",
+        "note": "implementing SIs still in draft",
+        "unit": ""
+      },
+      {
+        "label": "OSBP corridor coverage",
+        "value": "100%",
+        "note": "active corridors",
+        "unit": ""
+      },
+      {
+        "label": "AEO certified exporters",
+        "value": "15",
+        "note": "Kenya 370 · South Africa 831",
+        "unit": ""
+      }
     ],
     "sadcas_accredited_laboratories": [
-      {"label": "SADCAS-accredited laboratories", "value": "47", "note": "not the binding constraint", "unit": ""},
-      {"label": "Standards harmonised", "value": "2,400", "note": "South Africa 7,000+ · Kenya 7,900", "unit": ""},
-      {"label": "e-Phyto / e-SPS hub", "value": "Pilot", "note": "Kenya, South Africa fully digital", "unit": ""},
-      {"label": "Perishable clearance index", "value": "Planning", "note": "UNTF 2025 stage", "unit": ""}
+      {
+        "label": "SADCAS-accredited laboratories",
+        "value": "47",
+        "note": "not the binding constraint",
+        "unit": ""
+      },
+      {
+        "label": "Standards harmonised",
+        "value": "2,400",
+        "note": "South Africa 7,000+ · Kenya 7,900",
+        "unit": ""
+      },
+      {
+        "label": "e-Phyto / e-SPS hub",
+        "value": "Pilot",
+        "note": "Kenya, South Africa fully digital",
+        "unit": ""
+      },
+      {
+        "label": "Perishable clearance index",
+        "value": "Planning",
+        "note": "UNTF 2025 stage",
+        "unit": ""
+      }
     ],
     "manufacturing_output_growth": [
-      {"label": "Manufacturing output growth", "value": "4.3%", "note": "annualised 2024–Q1 2026 · benchmark &gt;5%", "unit": ""},
-      {"label": "Manufacturing share of employment", "value": "4.9%", "note": "SADC aggregate 5.0%", "unit": ""},
-      {"label": "UNIDO CIP rank", "value": "108th", "note": "score 0.01098 · ambition top 100", "unit": ""},
-      {"label": "Capacity utilisation", "value": "61.2%", "note": "<span class=\"up\">▲</span> from 57.0% · 2026 target 58%", "unit": ""}
+      {
+        "label": "Manufacturing output growth",
+        "value": "4.3%",
+        "note": "annualised 2024–Q1 2026 · benchmark &gt;5%",
+        "unit": ""
+      },
+      {
+        "label": "Manufacturing share of employment",
+        "value": "4.9%",
+        "note": "SADC aggregate 5.0%",
+        "unit": ""
+      },
+      {
+        "label": "UNIDO CIP rank",
+        "value": "108th",
+        "note": "score 0.01098 · ambition top 100",
+        "unit": ""
+      },
+      {
+        "label": "Capacity utilisation",
+        "value": "61.2%",
+        "note": "<span class=\"up\">▲</span> from 57.0% · 2026 target 58%",
+        "unit": ""
+      }
     ],
     "gold_export_earnings_2025": [
-      {"label": "Gold export earnings 2025", "value": "$4.61", "note": "almost tripled since 2021", "unit": "bn"},
-      {"label": "Gold output 2025", "value": "46.7", "note": "tonnes · earnings outpaced volume", "unit": ""},
-      {"label": "Artisanal &amp; small-scale share", "value": "74.6%", "note": "34.87 t of deliveries", "unit": ""},
-      {"label": "Share of fiscal revenue", "value": "22.0%", "note": "generated by small-scale gold production", "unit": ""}
+      {
+        "label": "Gold export earnings 2025",
+        "value": "$4.61",
+        "note": "almost tripled since 2021",
+        "unit": "bn"
+      },
+      {
+        "label": "Gold output 2025",
+        "value": "46.7",
+        "note": "tonnes · earnings outpaced volume",
+        "unit": ""
+      },
+      {
+        "label": "Artisanal &amp; small-scale share",
+        "value": "74.6%",
+        "note": "34.87 t of deliveries",
+        "unit": ""
+      },
+      {
+        "label": "Share of fiscal revenue",
+        "value": "22.0%",
+        "note": "generated by small-scale gold production",
+        "unit": ""
+      }
     ],
     "firms_affected_by_outages": [
-      {"label": "Firms affected by outages", "value": "52.5%", "note": "of formal firms", "unit": ""},
-      {"label": "Outages per month", "value": "3.8", "note": "average", "unit": ""},
-      {"label": "Management practices", "value": "54.8", "note": "SSA average 47.5", "unit": ""},
-      {"label": "Product innovation", "value": "31.6%", "note": "of firms", "unit": ""},
-      {"label": "Process innovation", "value": "19.4%", "note": "of firms", "unit": ""},
-      {"label": "Fixed assets funded internally", "value": "78.3%", "note": "bank credit reaches 23.1% of firms", "unit": ""}
+      {
+        "label": "Firms affected by outages",
+        "value": "52.5%",
+        "note": "of formal firms",
+        "unit": ""
+      },
+      {
+        "label": "Outages per month",
+        "value": "3.8",
+        "note": "average",
+        "unit": ""
+      },
+      {
+        "label": "Management practices",
+        "value": "54.8",
+        "note": "SSA average 47.5",
+        "unit": ""
+      },
+      {
+        "label": "Product innovation",
+        "value": "31.6%",
+        "note": "of firms",
+        "unit": ""
+      },
+      {
+        "label": "Process innovation",
+        "value": "19.4%",
+        "note": "of firms",
+        "unit": ""
+      },
+      {
+        "label": "Fixed assets funded internally",
+        "value": "78.3%",
+        "note": "bank credit reaches 23.1% of firms",
+        "unit": ""
+      }
     ],
     "net_fdi_inflows": [
-      {"label": "Net FDI inflows", "value": "$380", "note": "below $500 mn NDS2 target", "unit": "mn"},
-      {"label": "Inward FDI stock", "value": "$8.45", "note": "75.8% of inward stock is FDI", "unit": "bn"},
-      {"label": "FDI share of private inflows", "value": "79.5%", "note": "dominant external capital", "unit": ""},
-      {"label": "Outward greenfield 2021–25", "value": "$157", "note": "nine projects", "unit": "mn"}
+      {
+        "label": "Net FDI inflows",
+        "value": "$380",
+        "note": "below $500 mn NDS2 target",
+        "unit": "mn"
+      },
+      {
+        "label": "Inward FDI stock",
+        "value": "$8.45",
+        "note": "75.8% of inward stock is FDI",
+        "unit": "bn"
+      },
+      {
+        "label": "FDI share of private inflows",
+        "value": "79.5%",
+        "note": "dominant external capital",
+        "unit": ""
+      },
+      {
+        "label": "Outward greenfield 2021–25",
+        "value": "$157",
+        "note": "nine projects",
+        "unit": "mn"
+      }
     ],
     "repatriation_wait_time": [
-      {"label": "Repatriation wait time", "value": "120 days", "note": "from 180 days in 2022 · SADC &lt;30", "unit": ""},
-      {"label": "Net foreign capital retention", "value": "0.65", "note": "SSA median ≈0.55", "unit": ""},
-      {"label": "Dividends &amp; remittances", "value": "32.5%", "note": "of FDI inflows", "unit": ""},
-      {"label": "Debt service to dividends", "value": "1.85x", "note": "retention friction ≈0.14x", "unit": ""}
+      {
+        "label": "Repatriation wait time",
+        "value": "120 days",
+        "note": "from 180 days in 2022 · SADC &lt;30",
+        "unit": ""
+      },
+      {
+        "label": "Net foreign capital retention",
+        "value": "0.65",
+        "note": "SSA median ≈0.55",
+        "unit": ""
+      },
+      {
+        "label": "Dividends &amp; remittances",
+        "value": "32.5%",
+        "note": "of FDI inflows",
+        "unit": ""
+      },
+      {
+        "label": "Debt service to dividends",
+        "value": "1.85x",
+        "note": "retention friction ≈0.14x",
+        "unit": ""
+      }
     ],
     "investment_licences": [
-      {"label": "Investment licences", "value": "665", "note": "2024 · from 267 in 2022", "unit": ""},
-      {"label": "e-Regulations · OSISC", "value": "100%", "note": "12 of 12 agencies co-located", "unit": ""}
+      {
+        "label": "Investment licences",
+        "value": "665",
+        "note": "2024 · from 267 in 2022",
+        "unit": ""
+      },
+      {
+        "label": "e-Regulations · OSISC",
+        "value": "100%",
+        "note": "12 of 12 agencies co-located",
+        "unit": ""
+      }
     ],
     "beneficiation_alignment_index": [
-      {"label": "Beneficiation Alignment Index", "value": "0.28x", "note": "$0.28 to manufacturing per $1 to mining", "unit": ""},
-      {"label": "Active source countries", "value": "24", "note": "target &gt;40", "unit": ""},
-      {"label": "Origin concentration (HHI)", "value": "3,800", "note": "target &lt;3,000", "unit": ""},
-      {"label": "Investment outside Harare &amp; Bulawayo", "value": "38%", "note": "benchmark 50%", "unit": ""}
+      {
+        "label": "Beneficiation Alignment Index",
+        "value": "0.28x",
+        "note": "$0.28 to manufacturing per $1 to mining",
+        "unit": ""
+      },
+      {
+        "label": "Active source countries",
+        "value": "24",
+        "note": "target &gt;40",
+        "unit": ""
+      },
+      {
+        "label": "Origin concentration (HHI)",
+        "value": "3,800",
+        "note": "target &lt;3,000",
+        "unit": ""
+      },
+      {
+        "label": "Investment outside Harare &amp; Bulawayo",
+        "value": "38%",
+        "note": "benchmark 50%",
+        "unit": ""
+      }
     ]
   },
 
   /* ---- charts ----
-     Data behind every chart. k = label, v = value, hl = 1 highlights Zimbabwe, ph = 1 marks a placeholder value (shown faded), d = display text that overrides the formatted value, c = colour. */
+  Data behind every chart. k = label, v = value, hl = 1 highlights Zimbabwe, ph = 1 marks a placeholder value (shown faded), d = display text that overrides the formatted value, c = colour. */
   "charts": {
     "export_growth_peers": [
-      {"k": "Uganda", "v": 33.2},
-      {"k": "Zimbabwe", "v": 12.6, "hl": 1},
-      {"k": "Mozambique", "v": 9.1},
-      {"k": "Kenya", "v": 6.3},
-      {"k": "Zambia", "v": 4.7},
-      {"k": "SADC average", "v": 1.7},
-      {"k": "South Africa", "v": -1.1},
-      {"k": "Malawi", "v": -1.6}
+      {
+        "k": "Uganda",
+        "v": 33.2
+      },
+      {
+        "k": "Zimbabwe",
+        "v": 12.6,
+        "hl": 1
+      },
+      {
+        "k": "Mozambique",
+        "v": 9.1
+      },
+      {
+        "k": "Kenya",
+        "v": 6.3
+      },
+      {
+        "k": "Zambia",
+        "v": 4.7
+      },
+      {
+        "k": "SADC average",
+        "v": 1.7
+      },
+      {
+        "k": "South Africa",
+        "v": -1.1
+      },
+      {
+        "k": "Malawi",
+        "v": -1.6
+      }
     ],
     "export_intensity_peers": [
-      {"k": "Zambia", "v": 44.4},
-      {"k": "Mozambique", "v": 32.2},
-      {"k": "South Africa", "v": 29.6},
-      {"k": "Zimbabwe", "v": 27.7, "hl": 1},
-      {"k": "Uganda", "v": 14.3},
-      {"k": "Malawi", "v": 8.2},
-      {"k": "Kenya", "v": 6.9}
+      {
+        "k": "Zambia",
+        "v": 44.4
+      },
+      {
+        "k": "Mozambique",
+        "v": 32.2
+      },
+      {
+        "k": "South Africa",
+        "v": 29.6
+      },
+      {
+        "k": "Zimbabwe",
+        "v": 27.7,
+        "hl": 1
+      },
+      {
+        "k": "Uganda",
+        "v": 14.3
+      },
+      {
+        "k": "Malawi",
+        "v": 8.2
+      },
+      {
+        "k": "Kenya",
+        "v": 6.9
+      }
     ],
     "export_concentration": {
       "hhi": {
         "lab": "HHI (normalised, 0–1)",
         "dec": 2,
         "rows": [
-          {"k": "Malawi", "v": 0.64},
-          {"k": "Uganda", "v": 0.53},
-          {"k": "Zimbabwe", "v": 0.51, "hl": 1},
-          {"k": "Zambia", "v": 0.5},
-          {"k": "Tanzania", "v": 0.45},
-          {"k": "Mozambique", "v": 0.33},
-          {"k": "South Africa", "v": 0.13}
+          {
+            "k": "Malawi",
+            "v": 0.64
+          },
+          {
+            "k": "Uganda",
+            "v": 0.53
+          },
+          {
+            "k": "Zimbabwe",
+            "v": 0.51,
+            "hl": 1
+          },
+          {
+            "k": "Zambia",
+            "v": 0.5
+          },
+          {
+            "k": "Tanzania",
+            "v": 0.45
+          },
+          {
+            "k": "Mozambique",
+            "v": 0.33
+          },
+          {
+            "k": "South Africa",
+            "v": 0.13
+          }
         ],
         "max": 0.7,
-        "ticks": [0, 0.2, 0.4, 0.6]
+        "ticks": [
+          0,
+          0.2,
+          0.4,
+          0.6
+        ]
       },
       "theil": {
         "lab": "Theil index",
         "dec": 2,
         "rows": [
-          {"k": "Malawi", "v": 6.74},
-          {"k": "Zimbabwe", "v": 6.57, "hl": 1},
-          {"k": "Uganda", "v": 6.19},
-          {"k": "Zambia", "v": 6.09},
-          {"k": "Mozambique", "v": 5.86},
-          {"k": "Tanzania", "v": 5.5},
-          {"k": "South Africa", "v": 3.37}
+          {
+            "k": "Malawi",
+            "v": 6.74
+          },
+          {
+            "k": "Zimbabwe",
+            "v": 6.57,
+            "hl": 1
+          },
+          {
+            "k": "Uganda",
+            "v": 6.19
+          },
+          {
+            "k": "Zambia",
+            "v": 6.09
+          },
+          {
+            "k": "Mozambique",
+            "v": 5.86
+          },
+          {
+            "k": "Tanzania",
+            "v": 5.5
+          },
+          {
+            "k": "South Africa",
+            "v": 3.37
+          }
         ],
         "max": 7.5,
-        "ticks": [0, 2, 4, 6]
+        "ticks": [
+          0,
+          2,
+          4,
+          6
+        ]
       },
       "rsca": {
         "lab": "Product lines with RSCA > 0",
         "dec": 0,
         "rows": [
-          {"k": "South Africa", "v": 924},
-          {"k": "Tanzania", "v": 332},
-          {"k": "Zambia", "v": 196},
-          {"k": "Mozambique", "v": 151},
-          {"k": "Zimbabwe", "v": 140, "hl": 1},
-          {"k": "Malawi", "v": 109}
+          {
+            "k": "South Africa",
+            "v": 924
+          },
+          {
+            "k": "Tanzania",
+            "v": 332
+          },
+          {
+            "k": "Zambia",
+            "v": 196
+          },
+          {
+            "k": "Mozambique",
+            "v": 151
+          },
+          {
+            "k": "Zimbabwe",
+            "v": 140,
+            "hl": 1
+          },
+          {
+            "k": "Malawi",
+            "v": 109
+          }
         ],
         "max": 1000,
-        "ticks": [0, 250, 500, 750, 1000]
+        "ticks": [
+          0,
+          250,
+          500,
+          750,
+          1000
+        ]
       }
     },
     "price_volume_effects": [
-      {"k": "Gold (semi-manufactured)", "p": 1417, "vol": 668, "net": 2085, "pc": "+82.7%"},
-      {"k": "Nickel mattes", "p": -128.5, "vol": 552.7, "net": 424.2, "pc": "+42.9%"},
-      {"k": "Lithium-type products", "p": -45, "vol": 174.3, "net": 129.3, "pc": "+45.8%"}
+      {
+        "k": "Gold (semi-manufactured)",
+        "p": 1417,
+        "vol": 668,
+        "net": 2085,
+        "pc": "+82.7%"
+      },
+      {
+        "k": "Nickel mattes",
+        "p": -128.5,
+        "vol": 552.7,
+        "net": 424.2,
+        "pc": "+42.9%"
+      },
+      {
+        "k": "Lithium-type products",
+        "p": -45,
+        "vol": 174.3,
+        "net": 129.3,
+        "pc": "+45.8%"
+      }
     ],
     "export_portfolio_quadrants": [
-      {"k": "Vulnerables", "s": "RSCA > 0 · CAGR < 0", "n": 55, "sh": 4.43, "usd": "$429.7 mn", "c": "var(--c2)", "e": "Industrial diamonds, nickel ores, unwrought platinum, crude granite, unmanufactured cotton"},
-      {"k": "Anchors", "s": "RSCA > 0 · CAGR > 0", "n": 78, "sh": 90.88, "usd": "$8.821 bn", "c": "var(--c1)", "e": "Gold, nickel mattes, unmanufactured tobacco, ferro-chromium"},
-      {"k": "Exclusions", "s": "RSCA < 0 · CAGR < 0", "n": 208, "sh": 0.34, "usd": "$32.9 mn", "c": "var(--c4)", "e": "Plastic packaging, insulated conductors, diesel generating sets, copper ores, wooden furniture"},
-      {"k": "High-Potentials", "s": "RSCA < 0 · CAGR > 0", "n": 240, "sh": 3.64, "usd": "$353.1 mn", "c": "var(--c3)", "e": "Ammonium nitrate, electrical energy, iron and steel bars, unwrought gold"}
+      {
+        "k": "Vulnerables",
+        "s": "RSCA > 0 · CAGR < 0",
+        "n": 55,
+        "sh": 4.43,
+        "usd": "$429.7 mn",
+        "c": "var(--c2)",
+        "e": "Industrial diamonds, nickel ores, unwrought platinum, crude granite, unmanufactured cotton"
+      },
+      {
+        "k": "Anchors",
+        "s": "RSCA > 0 · CAGR > 0",
+        "n": 78,
+        "sh": 90.88,
+        "usd": "$8.821 bn",
+        "c": "var(--c1)",
+        "e": "Gold, nickel mattes, unmanufactured tobacco, ferro-chromium"
+      },
+      {
+        "k": "Exclusions",
+        "s": "RSCA < 0 · CAGR < 0",
+        "n": 208,
+        "sh": 0.34,
+        "usd": "$32.9 mn",
+        "c": "var(--c4)",
+        "e": "Plastic packaging, insulated conductors, diesel generating sets, copper ores, wooden furniture"
+      },
+      {
+        "k": "High-Potentials",
+        "s": "RSCA < 0 · CAGR > 0",
+        "n": 240,
+        "sh": 3.64,
+        "usd": "$353.1 mn",
+        "c": "var(--c3)",
+        "e": "Ammonium nitrate, electrical energy, iron and steel bars, unwrought gold"
+      }
     ],
     "trade_balance_peers": [
-      {"k": "SADC average", "v": 1.4},
-      {"k": "Zambia", "v": 0.5},
-      {"k": "Zimbabwe", "v": -1.3, "hl": 1},
-      {"k": "Mozambique", "v": -7.4},
-      {"k": "Uganda", "v": -10.6},
-      {"k": "Kenya", "v": -11.2},
-      {"k": "Malawi", "v": -28}
+      {
+        "k": "SADC average",
+        "v": 1.4
+      },
+      {
+        "k": "Zambia",
+        "v": 0.5
+      },
+      {
+        "k": "Zimbabwe",
+        "v": -1.3,
+        "hl": 1
+      },
+      {
+        "k": "Mozambique",
+        "v": -7.4
+      },
+      {
+        "k": "Uganda",
+        "v": -10.6
+      },
+      {
+        "k": "Kenya",
+        "v": -11.2
+      },
+      {
+        "k": "Malawi",
+        "v": -28
+      }
     ],
     "border_clearance_times": {
       "exp": {
         "lab": "Export customs release",
         "ref": 6.4,
         "rows": [
-          {"k": "Kenya", "v": 5.8},
-          {"k": "Mozambique", "v": 4.2},
-          {"k": "Zimbabwe", "v": 3.3, "hl": 1},
-          {"k": "Malawi", "v": 3},
-          {"k": "Zambia", "v": 1.6},
-          {"k": "Uganda", "v": 1.5}
+          {
+            "k": "Kenya",
+            "v": 5.8
+          },
+          {
+            "k": "Mozambique",
+            "v": 4.2
+          },
+          {
+            "k": "Zimbabwe",
+            "v": 3.3,
+            "hl": 1
+          },
+          {
+            "k": "Malawi",
+            "v": 3
+          },
+          {
+            "k": "Zambia",
+            "v": 1.6
+          },
+          {
+            "k": "Uganda",
+            "v": 1.5
+          }
         ]
       },
       "imp": {
         "lab": "Import customs release",
         "ref": 10.4,
         "rows": [
-          {"k": "Kenya", "v": 6.7},
-          {"k": "Uganda", "v": 5.4},
-          {"k": "Mozambique", "v": 3.2},
-          {"k": "Malawi", "v": 2.9},
-          {"k": "Zimbabwe", "v": 2.6, "hl": 1},
-          {"k": "Zambia", "v": 2}
+          {
+            "k": "Kenya",
+            "v": 6.7
+          },
+          {
+            "k": "Uganda",
+            "v": 5.4
+          },
+          {
+            "k": "Mozambique",
+            "v": 3.2
+          },
+          {
+            "k": "Malawi",
+            "v": 2.9
+          },
+          {
+            "k": "Zimbabwe",
+            "v": 2.6,
+            "hl": 1
+          },
+          {
+            "k": "Zambia",
+            "v": 2
+          }
         ]
       },
       "lic": {
         "lab": "Import licence",
         "ref": 18.5,
         "rows": [
-          {"k": "Malawi", "v": 16.6},
-          {"k": "Zambia", "v": 14.5},
-          {"k": "Kenya", "v": 12.7},
-          {"k": "Mozambique", "v": 12.2},
-          {"k": "Uganda", "v": 9.7},
-          {"k": "Zimbabwe", "v": 5.6, "hl": 1}
+          {
+            "k": "Malawi",
+            "v": 16.6
+          },
+          {
+            "k": "Zambia",
+            "v": 14.5
+          },
+          {
+            "k": "Kenya",
+            "v": 12.7
+          },
+          {
+            "k": "Mozambique",
+            "v": 12.2
+          },
+          {
+            "k": "Uganda",
+            "v": 9.7
+          },
+          {
+            "k": "Zimbabwe",
+            "v": 5.6,
+            "hl": 1
+          }
         ]
       }
     },
     "ntb_sla_compliance": [
-      {"k": "Rwanda", "v": 66.7},
-      {"k": "Zambia", "v": 20},
-      {"k": "Zimbabwe — outbound", "v": 14.3, "hl": 1, "t": "1 of 7 cases"},
-      {"k": "Zimbabwe — inbound", "v": 0, "hl": 1, "t": "0 of 6 cases"},
-      {"k": "South Africa", "v": 0},
-      {"k": "Tanzania", "v": 0}
+      {
+        "k": "Rwanda",
+        "v": 66.7
+      },
+      {
+        "k": "Zambia",
+        "v": 20
+      },
+      {
+        "k": "Zimbabwe — outbound",
+        "v": 14.3,
+        "hl": 1,
+        "t": "1 of 7 cases"
+      },
+      {
+        "k": "Zimbabwe — inbound",
+        "v": 0,
+        "hl": 1,
+        "t": "0 of 6 cases"
+      },
+      {
+        "k": "South Africa",
+        "v": 0
+      },
+      {
+        "k": "Tanzania",
+        "v": 0
+      }
     ],
     "ntb_resolution_days": [
-      {"k": "Zimbabwe — inbound", "v": 1029.2, "hl": 1},
-      {"k": "Zambia", "v": 539.4},
-      {"k": "Zimbabwe — outbound", "v": 412.4, "hl": 1},
-      {"k": "Malawi", "v": 340.5},
-      {"k": "Uganda", "v": 205}
+      {
+        "k": "Zimbabwe — inbound",
+        "v": 1029.2,
+        "hl": 1
+      },
+      {
+        "k": "Zambia",
+        "v": 539.4
+      },
+      {
+        "k": "Zimbabwe — outbound",
+        "v": 412.4,
+        "hl": 1
+      },
+      {
+        "k": "Malawi",
+        "v": 340.5
+      },
+      {
+        "k": "Uganda",
+        "v": 205
+      }
     ],
     "mva_per_capita_peers": [
-      {"k": "Zimbabwe", "v": 298, "hl": 1},
-      {"k": "SADC average", "v": 181},
-      {"k": "Kenya", "v": 159},
-      {"k": "Uganda", "v": 153},
-      {"k": "Zambia", "v": 85}
+      {
+        "k": "Zimbabwe",
+        "v": 298,
+        "hl": 1
+      },
+      {
+        "k": "SADC average",
+        "v": 181
+      },
+      {
+        "k": "Kenya",
+        "v": 159
+      },
+      {
+        "k": "Uganda",
+        "v": 153
+      },
+      {
+        "k": "Zambia",
+        "v": 85
+      }
     ],
     "mva_share_gdp_peers": [
-      {"k": "Uganda", "v": 15.5},
-      {"k": "Malawi", "v": 11.8},
-      {"k": "Zimbabwe", "v": 11.5, "hl": 1},
-      {"k": "SADC average", "v": 10.1},
-      {"k": "Zambia", "v": 7.9},
-      {"k": "Kenya", "v": 6.9}
+      {
+        "k": "Uganda",
+        "v": 15.5
+      },
+      {
+        "k": "Malawi",
+        "v": 11.8
+      },
+      {
+        "k": "Zimbabwe",
+        "v": 11.5,
+        "hl": 1
+      },
+      {
+        "k": "SADC average",
+        "v": 10.1
+      },
+      {
+        "k": "Zambia",
+        "v": 7.9
+      },
+      {
+        "k": "Kenya",
+        "v": 6.9
+      }
     ],
     "capacity_utilisation_peers": [
-      {"k": "South Africa", "v": 75},
-      {"k": "Kenya", "v": 68},
-      {"k": "Zambia", "v": 62},
-      {"k": "Zimbabwe", "v": 61.2, "hl": 1}
+      {
+        "k": "South Africa",
+        "v": 75
+      },
+      {
+        "k": "Kenya",
+        "v": 68
+      },
+      {
+        "k": "Zambia",
+        "v": 62
+      },
+      {
+        "k": "Zimbabwe",
+        "v": 61.2,
+        "hl": 1
+      }
     ],
     "management_practices_peers": [
-      {"k": "Kenya", "v": 61.4},
-      {"k": "Zimbabwe", "v": 54.8, "hl": 1},
-      {"k": "Zambia", "v": 52.7},
-      {"k": "SSA average", "v": 47.5}
+      {
+        "k": "Kenya",
+        "v": 61.4
+      },
+      {
+        "k": "Zimbabwe",
+        "v": 54.8,
+        "hl": 1
+      },
+      {
+        "k": "Zambia",
+        "v": 52.7
+      },
+      {
+        "k": "SSA average",
+        "v": 47.5
+      }
     ],
     "export_quality_peers": [
-      {"k": "Kenya", "v": 0.354},
-      {"k": "Zimbabwe", "v": 0.262, "hl": 1},
-      {"k": "Zambia", "v": 0.253},
-      {"k": "SADC average", "v": 0.207}
+      {
+        "k": "Kenya",
+        "v": 0.354
+      },
+      {
+        "k": "Zimbabwe",
+        "v": 0.262,
+        "hl": 1
+      },
+      {
+        "k": "Zambia",
+        "v": 0.253
+      },
+      {
+        "k": "SADC average",
+        "v": 0.207
+      }
     ],
     "technology_intensity_peers": [
-      {"k": "Zambia", "v": 18.6},
-      {"k": "Kenya", "v": 16.4},
-      {"k": "SSA average", "v": 11.1},
-      {"k": "Zimbabwe", "v": 9.5, "hl": 1}
+      {
+        "k": "Zambia",
+        "v": 18.6
+      },
+      {
+        "k": "Kenya",
+        "v": 16.4
+      },
+      {
+        "k": "SSA average",
+        "v": 11.1
+      },
+      {
+        "k": "Zimbabwe",
+        "v": 9.5,
+        "hl": 1
+      }
     ],
     "grid_connection_days_peers": [
-      {"k": "SSA average", "v": 30.4},
-      {"k": "Zimbabwe", "v": 19.6, "hl": 1},
-      {"k": "Kenya", "v": 13.8},
-      {"k": "Zambia", "v": 10.3}
+      {
+        "k": "SSA average",
+        "v": 30.4
+      },
+      {
+        "k": "Zimbabwe",
+        "v": 19.6,
+        "hl": 1
+      },
+      {
+        "k": "Kenya",
+        "v": 13.8
+      },
+      {
+        "k": "Zambia",
+        "v": 10.3
+      }
     ],
     "local_value_retention_peers": [
-      {"k": "South Africa", "v": 65},
-      {"k": "Zambia", "v": 45},
-      {"k": "Zimbabwe", "v": 32, "hl": 1}
+      {
+        "k": "South Africa",
+        "v": 65
+      },
+      {
+        "k": "Zambia",
+        "v": 45
+      },
+      {
+        "k": "Zimbabwe",
+        "v": 32,
+        "hl": 1
+      }
     ],
     "fdi_inflows_peers": {
       "usd": {
         "lab": "Net FDI inflows, US$ million",
         "rows": [
-          {"k": "Mozambique", "v": 5690},
-          {"k": "Zambia", "v": 1290},
-          {"k": "Zimbabwe", "v": 380, "hl": 1}
+          {
+            "k": "Mozambique",
+            "v": 5690
+          },
+          {
+            "k": "Zambia",
+            "v": 1290
+          },
+          {
+            "k": "Zimbabwe",
+            "v": 380,
+            "hl": 1
+          }
         ],
         "o": {
           "unit": "usd",
-          "ref": {"v": 500, "label": "2026 NDS2 target $500 mn"},
+          "ref": {
+            "v": 500,
+            "label": "2026 NDS2 target $500 mn"
+          },
           "max": 6200,
-          "ticks": [0, 2000, 4000, 6000]
+          "ticks": [
+            0,
+            2000,
+            4000,
+            6000
+          ]
         }
       },
       "gdp": {
         "lab": "Net FDI inflows, % of GDP",
         "rows": [
-          {"k": "Mozambique", "v": 12},
-          {"k": "Zambia", "v": 4.5},
-          {"k": "SSA median", "v": 3.5},
-          {"k": "Zimbabwe", "v": 1.9, "hl": 1}
+          {
+            "k": "Mozambique",
+            "v": 12
+          },
+          {
+            "k": "Zambia",
+            "v": 4.5
+          },
+          {
+            "k": "SSA median",
+            "v": 3.5
+          },
+          {
+            "k": "Zimbabwe",
+            "v": 1.9,
+            "hl": 1
+          }
         ],
         "o": {
           "unit": "pct",
-          "ref": {"v": 1.8, "label": "2026 NDS2 target 1.8%"},
+          "ref": {
+            "v": 1.8,
+            "label": "2026 NDS2 target 1.8%"
+          },
           "max": 13,
-          "ticks": [0, 4, 8, 12]
+          "ticks": [
+            0,
+            4,
+            8,
+            12
+          ]
         }
       }
     },
@@ -401,160 +1301,734 @@ window.TII_DB = {
         "lab": "Construction permit",
         "ref": 26.8,
         "rows": [
-          {"k": "Zambia", "v": 30.8},
-          {"k": "Mozambique", "v": 21.3},
-          {"k": "Uganda", "v": 17},
-          {"k": "Kenya", "v": 15.4},
-          {"k": "Malawi", "v": 10.3},
-          {"k": "Zimbabwe", "v": 6.7, "hl": 1}
+          {
+            "k": "Zambia",
+            "v": 30.8
+          },
+          {
+            "k": "Mozambique",
+            "v": 21.3
+          },
+          {
+            "k": "Uganda",
+            "v": 17
+          },
+          {
+            "k": "Kenya",
+            "v": 15.4
+          },
+          {
+            "k": "Malawi",
+            "v": 10.3
+          },
+          {
+            "k": "Zimbabwe",
+            "v": 6.7,
+            "hl": 1
+          }
         ]
       },
       "op": {
         "lab": "Operating licence",
         "ref": 16.5,
         "rows": [
-          {"k": "Mozambique", "v": 20.6},
-          {"k": "Malawi", "v": 16.1},
-          {"k": "Zambia", "v": 14.6},
-          {"k": "Uganda", "v": 7.1},
-          {"k": "Kenya", "v": 6.6},
-          {"k": "Zimbabwe", "v": 6, "hl": 1}
+          {
+            "k": "Mozambique",
+            "v": 20.6
+          },
+          {
+            "k": "Malawi",
+            "v": 16.1
+          },
+          {
+            "k": "Zambia",
+            "v": 14.6
+          },
+          {
+            "k": "Uganda",
+            "v": 7.1
+          },
+          {
+            "k": "Kenya",
+            "v": 6.6
+          },
+          {
+            "k": "Zimbabwe",
+            "v": 6,
+            "hl": 1
+          }
         ]
       }
     },
     "investor_journey": [
-      {"k": "Investment licence growth", "actual": "20.8%", "target": "&gt;15%", "a": 1},
-      {"k": "3-year licence renewal rate", "actual": "54.73%", "target": "&gt;85%", "a": 0.644},
-      {"k": "Investment conversion rate", "actual": "11.7%", "target": "&gt;20%", "a": 0.585},
-      {"k": "Grievance resolution (30 days)", "actual": "20%", "target": "&gt;80%", "a": 0.25},
-      {"k": "FX repatriation lead time", "actual": "120 days", "target": "&lt;30 days", "a": 0.25}
+      {
+        "k": "Investment licence growth",
+        "actual": "20.8%",
+        "target": "&gt;15%",
+        "a": 1
+      },
+      {
+        "k": "3-year licence renewal rate",
+        "actual": "54.73%",
+        "target": "&gt;85%",
+        "a": 0.644
+      },
+      {
+        "k": "Investment conversion rate",
+        "actual": "11.7%",
+        "target": "&gt;20%",
+        "a": 0.585
+      },
+      {
+        "k": "Grievance resolution (30 days)",
+        "actual": "20%",
+        "target": "&gt;80%",
+        "a": 0.25
+      },
+      {
+        "k": "FX repatriation lead time",
+        "actual": "120 days",
+        "target": "&lt;30 days",
+        "a": 0.25
+      }
     ],
     "licences_by_province": [
-      {"k": "Harare", "v": 257, "hl": 1, "t": "39.84% of licences · 62% of approved capital"},
-      {"k": "Midlands", "v": 117, "t": "18.14%"},
-      {"k": "Matabeleland North", "v": 98, "t": "15.19%"},
-      {"k": "Matabeleland South", "v": 74, "t": "11.47%"},
-      {"k": "Mashonaland West", "v": 57, "t": "8.84%"},
-      {"k": "Others", "v": 42, "t": "6.52%"}
+      {
+        "k": "Harare",
+        "v": 257,
+        "hl": 1,
+        "t": "39.84% of licences · 62% of approved capital"
+      },
+      {
+        "k": "Midlands",
+        "v": 117,
+        "t": "18.14%"
+      },
+      {
+        "k": "Matabeleland North",
+        "v": 98,
+        "t": "15.19%"
+      },
+      {
+        "k": "Matabeleland South",
+        "v": 74,
+        "t": "11.47%"
+      },
+      {
+        "k": "Mashonaland West",
+        "v": 57,
+        "t": "8.84%"
+      },
+      {
+        "k": "Others",
+        "v": 42,
+        "t": "6.52%"
+      }
     ],
     "score_over_editions": [
-      {"k": "2027", "v": 58.5, "ph": 1, "c": "var(--ink)"},
-      {"k": "2028", "v": 61, "ph": 1, "c": "var(--ink)"},
-      {"k": "2029", "v": 63.5, "ph": 1, "c": "var(--ink)"},
-      {"k": "2030", "v": 66, "ph": 1, "c": "var(--ink)"}
+      {
+        "k": "2027",
+        "v": 58.5,
+        "ph": 1,
+        "c": "var(--ink)"
+      },
+      {
+        "k": "2028",
+        "v": 61,
+        "ph": 1,
+        "c": "var(--ink)"
+      },
+      {
+        "k": "2029",
+        "v": 63.5,
+        "ph": 1,
+        "c": "var(--ink)"
+      },
+      {
+        "k": "2030",
+        "v": 66,
+        "ph": 1,
+        "c": "var(--ink)"
+      }
     ],
-        "what_drove_export_growth": [
-      {"k": "Gold (+82.7% on 2024)", "v": 2.085, "c": "var(--c1)"},
-      {"k": "Non-gold exports (+3.3%)", "v": 0.165, "c": "var(--peer)", "ink": "#141414"}
+    "what_drove_export_growth": [
+      {
+        "k": "Gold (+82.7% on 2024)",
+        "v": 2.085,
+        "c": "var(--c1)"
+      },
+      {
+        "k": "Non-gold exports (+3.3%)",
+        "v": 0.165,
+        "c": "var(--peer)",
+        "ink": "#141414"
+      }
     ],
     "trade_balance_trend": [
-      {"k": "2021", "v": -1505},
-      {"k": "2022", "v": -1820, "ph": 1, "c": "var(--peer-ink)"},
-      {"k": "2023", "v": -1960, "ph": 1, "c": "var(--peer-ink)"},
-      {"k": "2024", "v": -2099},
-      {"k": "2025", "v": -414}
+      {
+        "k": "2021",
+        "v": -1505
+      },
+      {
+        "k": "2022",
+        "v": -1820,
+        "ph": 1,
+        "c": "var(--peer-ink)"
+      },
+      {
+        "k": "2023",
+        "v": -1960,
+        "ph": 1,
+        "c": "var(--peer-ink)"
+      },
+      {
+        "k": "2024",
+        "v": -2099
+      },
+      {
+        "k": "2025",
+        "v": -414
+      }
     ],
-    "accredited_testing_laboratories": [{"k": "Tanzania", "v": 101}, {"k": "Zimbabwe", "v": 47, "hl": 1}, {"k": "Botswana", "v": 36}, {"k": "Namibia", "v": 36}, {"k": "Zambia", "v": 28}, {"k": "Malawi", "v": 20}, {"k": "Mauritius", "v": 2}],
+    "accredited_testing_laboratories": [
+      {
+        "k": "Tanzania",
+        "v": 101
+      },
+      {
+        "k": "Zimbabwe",
+        "v": 47,
+        "hl": 1
+      },
+      {
+        "k": "Botswana",
+        "v": 36
+      },
+      {
+        "k": "Namibia",
+        "v": 36
+      },
+      {
+        "k": "Zambia",
+        "v": 28
+      },
+      {
+        "k": "Malawi",
+        "v": 20
+      },
+      {
+        "k": "Mauritius",
+        "v": 2
+      }
+    ],
     "harmonised_standards": [
-      {"k": "Kenya", "v": 7900},
-      {"k": "South Africa", "v": 7000, "d": "7,000+"},
-      {"k": "Zambia", "v": 3100, "ph": 1},
-      {"k": "Zimbabwe", "v": 2400, "hl": 1},
-      {"k": "Mozambique", "v": 1600, "ph": 1}
+      {
+        "k": "Kenya",
+        "v": 7900
+      },
+      {
+        "k": "South Africa",
+        "v": 7000,
+        "d": "7,000+"
+      },
+      {
+        "k": "Zambia",
+        "v": 3100,
+        "ph": 1
+      },
+      {
+        "k": "Zimbabwe",
+        "v": 2400,
+        "hl": 1
+      },
+      {
+        "k": "Mozambique",
+        "v": 1600,
+        "ph": 1
+      }
     ],
-    "manufacturing_share_trend": [{"k": "2021", "v": 12.9}, {"k": "2022", "v": 12.3}, {"k": "2023", "v": 11.9}, {"k": "2024", "v": 11.9}, {"k": "2025", "v": 11.5}],
+    "manufacturing_share_trend": [
+      {
+        "k": "2021",
+        "v": 12.9
+      },
+      {
+        "k": "2022",
+        "v": 12.3
+      },
+      {
+        "k": "2023",
+        "v": 11.9
+      },
+      {
+        "k": "2024",
+        "v": 11.9
+      },
+      {
+        "k": "2025",
+        "v": 11.5
+      }
+    ],
     "capacity_utilisation_trend": [
-      {"k": "2022", "v": 52, "ph": 1, "c": "var(--peer-ink)"},
-      {"k": "2023", "v": 55, "ph": 1, "c": "var(--peer-ink)"},
-      {"k": "2024", "v": 56, "ph": 1, "c": "var(--peer-ink)"},
-      {"k": "FY2025", "v": 57},
-      {"k": "2026", "v": 61.2}
+      {
+        "k": "2022",
+        "v": 52,
+        "ph": 1,
+        "c": "var(--peer-ink)"
+      },
+      {
+        "k": "2023",
+        "v": 55,
+        "ph": 1,
+        "c": "var(--peer-ink)"
+      },
+      {
+        "k": "2024",
+        "v": 56,
+        "ph": 1,
+        "c": "var(--peer-ink)"
+      },
+      {
+        "k": "FY2025",
+        "v": 57
+      },
+      {
+        "k": "2026",
+        "v": 61.2
+      }
     ],
     "agro_processing_gap": [
-      {"k": "Processed agriculture export ratio", "actual": "0.14 : 1", "target": "1.5 : 1", "a": 0.093},
-      {"k": "Food-import dependence (inverted)", "actual": "18.7%", "target": "&lt;5.0%", "a": 0.267},
-      {"k": "Food output-to-harvest ratio", "actual": "0.95x", "target": "benchmark", "a": 0.528},
-      {"k": "Value-added share of exports", "actual": "29.2%", "target": "44.4% peer avg", "a": 0.658}
+      {
+        "k": "Processed agriculture export ratio",
+        "actual": "0.14 : 1",
+        "target": "1.5 : 1",
+        "a": 0.093
+      },
+      {
+        "k": "Food-import dependence (inverted)",
+        "actual": "18.7%",
+        "target": "&lt;5.0%",
+        "a": 0.267
+      },
+      {
+        "k": "Food output-to-harvest ratio",
+        "actual": "0.95x",
+        "target": "benchmark",
+        "a": 0.528
+      },
+      {
+        "k": "Value-added share of exports",
+        "actual": "29.2%",
+        "target": "44.4% peer avg",
+        "a": 0.658
+      }
     ],
     "food_import_bill": [
-      {"k": "Basic staples (maize, crude soybean oil, wheat, rice)", "v": 1.06, "c": "var(--c2)"},
-      {"k": "Other food imports", "v": 0.83, "c": "var(--peer)", "ink": "#141414"}
+      {
+        "k": "Basic staples (maize, crude soybean oil, wheat, rice)",
+        "v": 1.06,
+        "c": "var(--c2)"
+      },
+      {
+        "k": "Other food imports",
+        "v": 0.83,
+        "c": "var(--peer)",
+        "ink": "#141414"
+      }
     ],
-    "gold_output_by_producer": [{"k": "2021", "asm": 16.5, "lsp": 13.1, "net": 29.6}, {"k": "2022", "asm": 24.06, "lsp": 11.32, "net": 35.38}, {"k": "2023", "asm": 18.59, "lsp": 11.52, "net": 30.11}, {"k": "2024", "asm": 24.02, "lsp": 12.38, "net": 36.4}, {"k": "2025", "asm": 34.87, "lsp": 11.83, "net": 46.7}],
-      "food_imports_by_product": [{"k": "Other food, dairy & agri", "v": 672.8, "c": "var(--peer)"}, {"k": "Maize", "v": 447.2, "c": "var(--c2)"}, {"k": "Crude soya-bean oil", "v": 267.1, "c": "var(--c2)"}, {"k": "Wheat", "v": 186.8, "c": "var(--c2)"}, {"k": "Rice", "v": 161.5, "c": "var(--c2)"}, {"k": "Soya beans", "v": 95.9, "c": "var(--c2)"}, {"k": "Palm oil & refined", "v": 57.2, "c": "var(--c2)"}],
-    "gold_export_earnings": [{"k": "2021", "v": 1.61}, {"k": "2022", "v": 2.0}, {"k": "2023", "v": 1.81}, {"k": "2024", "v": 2.52}, {"k": "2025", "v": 4.61}],
-    "gold_output": [{"k": "2021", "v": 29.6}, {"k": "2022", "v": 35.38}, {"k": "2023", "v": 30.11}, {"k": "2024", "v": 36.4}, {"k": "2025", "v": 46.7}],
+    "gold_output_by_producer": [
+      {
+        "k": "2021",
+        "asm": 16.5,
+        "lsp": 13.1,
+        "net": 29.6
+      },
+      {
+        "k": "2022",
+        "asm": 24.06,
+        "lsp": 11.32,
+        "net": 35.38
+      },
+      {
+        "k": "2023",
+        "asm": 18.59,
+        "lsp": 11.52,
+        "net": 30.11
+      },
+      {
+        "k": "2024",
+        "asm": 24.02,
+        "lsp": 12.38,
+        "net": 36.4
+      },
+      {
+        "k": "2025",
+        "asm": 34.87,
+        "lsp": 11.83,
+        "net": 46.7
+      }
+    ],
+    "food_imports_by_product": [
+      {
+        "k": "Other food, dairy & agri",
+        "v": 672.8,
+        "c": "var(--peer)"
+      },
+      {
+        "k": "Maize",
+        "v": 447.2,
+        "c": "var(--c2)"
+      },
+      {
+        "k": "Crude soya-bean oil",
+        "v": 267.1,
+        "c": "var(--c2)"
+      },
+      {
+        "k": "Wheat",
+        "v": 186.8,
+        "c": "var(--c2)"
+      },
+      {
+        "k": "Rice",
+        "v": 161.5,
+        "c": "var(--c2)"
+      },
+      {
+        "k": "Soya beans",
+        "v": 95.9,
+        "c": "var(--c2)"
+      },
+      {
+        "k": "Palm oil & refined",
+        "v": 57.2,
+        "c": "var(--c2)"
+      }
+    ],
+    "gold_export_earnings": [
+      {
+        "k": "2021",
+        "v": 1.61
+      },
+      {
+        "k": "2022",
+        "v": 2
+      },
+      {
+        "k": "2023",
+        "v": 1.81
+      },
+      {
+        "k": "2024",
+        "v": 2.52
+      },
+      {
+        "k": "2025",
+        "v": 4.61
+      }
+    ],
+    "gold_output": [
+      {
+        "k": "2021",
+        "v": 29.6
+      },
+      {
+        "k": "2022",
+        "v": 35.38
+      },
+      {
+        "k": "2023",
+        "v": 30.11
+      },
+      {
+        "k": "2024",
+        "v": 36.4
+      },
+      {
+        "k": "2025",
+        "v": 46.7
+      }
+    ],
     "lithium_revenue_by_processing_stage": [
-      {"k": "Raw concentrate", "v": 87.4, "c": "var(--peer)"},
-      {"k": "Lithium sulphate", "v": 12.6, "c": "var(--c1)"}
+      {
+        "k": "Raw concentrate",
+        "v": 87.4,
+        "c": "var(--peer)"
+      },
+      {
+        "k": "Lithium sulphate",
+        "v": 12.6,
+        "c": "var(--c1)"
+      }
     ],
     "pgm_revenue_by_processing_stage": [
-      {"k": "Smelted matte", "v": 81.13, "c": "var(--c1)"},
-      {"k": "Raw concentrate & other", "v": 15.94, "c": "var(--peer)", "ink": "#141414"},
-      {"k": "Refined unwrought platinum", "v": 2.93, "c": "var(--c5)"}
+      {
+        "k": "Smelted matte",
+        "v": 81.13,
+        "c": "var(--c1)"
+      },
+      {
+        "k": "Raw concentrate & other",
+        "v": 15.94,
+        "c": "var(--peer)",
+        "ink": "#141414"
+      },
+      {
+        "k": "Refined unwrought platinum",
+        "v": 2.93,
+        "c": "var(--c5)"
+      }
     ],
     "chrome_revenue_by_processing_stage": [
-      {"k": "Ferro-chromium", "v": 77.79, "c": "var(--c1)"},
-      {"k": "Raw ore & other", "v": 22.21, "c": "var(--peer)", "ink": "#141414"}
+      {
+        "k": "Ferro-chromium",
+        "v": 77.79,
+        "c": "var(--c1)"
+      },
+      {
+        "k": "Raw ore & other",
+        "v": 22.21,
+        "c": "var(--peer)",
+        "ink": "#141414"
+      }
     ],
-    "power_outage_frequency": [{"k": "Zambia", "v": 21.6}, {"k": "Malawi", "v": 7.1}, {"k": "Uganda", "v": 3.9}, {"k": "Zimbabwe", "v": 3.8, "hl": 1}, {"k": "Kenya", "v": 2.8}, {"k": "Mozambique", "v": 2.7}],
+    "power_outage_frequency": [
+      {
+        "k": "Zambia",
+        "v": 21.6
+      },
+      {
+        "k": "Malawi",
+        "v": 7.1
+      },
+      {
+        "k": "Uganda",
+        "v": 3.9
+      },
+      {
+        "k": "Zimbabwe",
+        "v": 3.8,
+        "hl": 1
+      },
+      {
+        "k": "Kenya",
+        "v": 2.8
+      },
+      {
+        "k": "Mozambique",
+        "v": 2.7
+      }
+    ],
     "from_licence_to_realised_capital": [
-      {"k": "Licensed by ZIDA", "v": 3260, "c": "var(--peer)", "d": "$3,260"},
-      {"k": "Gross realised (29.6%)", "v": 965, "c": "var(--s-ini)", "d": "$965"},
-      {"k": "Net FDI (11.7%)", "v": 380, "hl": 1, "d": "$380"}
+      {
+        "k": "Licensed by ZIDA",
+        "v": 3260,
+        "c": "var(--peer)",
+        "d": "$3,260"
+      },
+      {
+        "k": "Gross realised (29.6%)",
+        "v": 965,
+        "c": "var(--s-ini)",
+        "d": "$965"
+      },
+      {
+        "k": "Net FDI (11.7%)",
+        "v": 380,
+        "hl": 1,
+        "d": "$380"
+      }
     ],
     "capital_against_activation_thresholds": [
-      {"k": "Mining FDI vs activation threshold", "actual": "$245 mn", "target": "$300 mn", "a": 0.8166666666666667},
-      {"k": "Greenfield announcements", "actual": "$420 mn", "target": "$500 mn", "a": 0.84},
-      {"k": "Net conversion rate", "actual": "11.7%", "target": "20%", "a": 0.585}
+      {
+        "k": "Mining FDI vs activation threshold",
+        "actual": "$245 mn",
+        "target": "$300 mn",
+        "a": 0.8166666666666667
+      },
+      {
+        "k": "Greenfield announcements",
+        "actual": "$420 mn",
+        "target": "$500 mn",
+        "a": 0.84
+      },
+      {
+        "k": "Net conversion rate",
+        "actual": "11.7%",
+        "target": "20%",
+        "a": 0.585
+      }
     ],
     "fdi_inflow_trend": [
-      {"k": "2021", "v": 260, "ph": 1, "c": "var(--peer-ink)"},
-      {"k": "2022", "v": 340, "ph": 1, "c": "var(--peer-ink)"},
-      {"k": "2023", "v": 410, "ph": 1, "c": "var(--peer-ink)"},
-      {"k": "2024", "v": 355, "ph": 1, "c": "var(--peer-ink)"},
-      {"k": "2025", "v": 380}
+      {
+        "k": "2021",
+        "v": 260,
+        "ph": 1,
+        "c": "var(--peer-ink)"
+      },
+      {
+        "k": "2022",
+        "v": 340,
+        "ph": 1,
+        "c": "var(--peer-ink)"
+      },
+      {
+        "k": "2023",
+        "v": 410,
+        "ph": 1,
+        "c": "var(--peer-ink)"
+      },
+      {
+        "k": "2024",
+        "v": 355,
+        "ph": 1,
+        "c": "var(--peer-ink)"
+      },
+      {
+        "k": "2025",
+        "v": 380
+      }
     ],
     "funding_mix_of_approved_investment": [
-      {"k": "Debt", "v": 86.5, "d": "≈$2,820 mn", "c": "var(--c2)"},
-      {"k": "Equipment", "v": 10.8, "d": "$354.1 mn", "c": "var(--c1)"},
-      {"k": "Cash", "v": 2.2, "d": "$72.5 mn", "c": "var(--c3)"}
+      {
+        "k": "Debt",
+        "v": 86.5,
+        "d": "≈$2,820 mn",
+        "c": "var(--c2)"
+      },
+      {
+        "k": "Equipment",
+        "v": 10.8,
+        "d": "$354.1 mn",
+        "c": "var(--c1)"
+      },
+      {
+        "k": "Cash",
+        "v": 2.2,
+        "d": "$72.5 mn",
+        "c": "var(--c3)"
+      }
     ],
     "repatriation_wait_time": [
-      {"k": "2022", "v": 180},
-      {"k": "2023", "v": 160, "ph": 1, "c": "var(--peer-ink)"},
-      {"k": "2024", "v": 140, "ph": 1, "c": "var(--peer-ink)"},
-      {"k": "2025", "v": 120}
+      {
+        "k": "2022",
+        "v": 110
+      },
+      {
+        "k": "2023",
+        "v": 160,
+        "ph": 1,
+        "c": "var(--peer-ink)"
+      },
+      {
+        "k": "2024",
+        "v": 190,
+        "ph": 1,
+        "c": "var(--peer-ink)"
+      },
+      {
+        "k": "2025",
+        "v": 120
+      }
     ],
     "construction_permit_trend": [
-      {"k": "2022", "v": 28, "c": "var(--peer)"},
-      {"k": "2023", "v": 15, "c": "var(--peer)"},
-      {"k": "2024–25", "v": 6.7}
+      {
+        "k": "2022",
+        "v": 28,
+        "c": "var(--peer)"
+      },
+      {
+        "k": "2023",
+        "v": 15,
+        "c": "var(--peer)"
+      },
+      {
+        "k": "2024–25",
+        "v": 6.7
+      }
     ],
     "investment_licences_issued": [
-      {"k": "2022", "v": 267},
-      {"k": "2023", "v": 430, "ph": 1, "c": "var(--peer-ink)"},
-      {"k": "2024", "v": 665},
-      {"k": "2025", "v": 803, "d": "803*"}
+      {
+        "k": "2022",
+        "v": 267
+      },
+      {
+        "k": "2023",
+        "v": 430,
+        "ph": 1,
+        "c": "var(--peer-ink)"
+      },
+      {
+        "k": "2024",
+        "v": 665
+      },
+      {
+        "k": "2025",
+        "v": 803,
+        "d": "803*"
+      }
     ],
     "investment_by_sector": [
-      {"k": "Manufacturing", "v": 43.01, "c": "var(--c1)"},
-      {"k": "Mining", "v": 32.49, "c": "var(--c2)", "ink": "#141414"},
-      {"k": "Agriculture", "v": 12.75, "c": "var(--c3)", "ink": "#141414"},
-      {"k": "Energy & services", "v": 11.76, "c": "var(--c4)", "ink": "#141414"}
+      {
+        "k": "Manufacturing",
+        "v": 43.01,
+        "c": "var(--c1)"
+      },
+      {
+        "k": "Mining",
+        "v": 32.49,
+        "c": "var(--c2)",
+        "ink": "#141414"
+      },
+      {
+        "k": "Agriculture",
+        "v": 12.75,
+        "c": "var(--c3)",
+        "ink": "#141414"
+      },
+      {
+        "k": "Energy & services",
+        "v": 11.76,
+        "c": "var(--c4)",
+        "ink": "#141414"
+      }
     ],
     "investment_by_source_country": [
-      {"k": "China", "v": 41, "ph": 1},
-      {"k": "South Africa", "v": 17, "ph": 1},
-      {"k": "United Kingdom", "v": 9, "ph": 1},
-      {"k": "UAE", "v": 8, "ph": 1},
-      {"k": "Mauritius", "v": 6, "ph": 1},
-      {"k": "Other 19 countries", "v": 19, "ph": 1}
+      {
+        "k": "China",
+        "v": 41,
+        "ph": 1
+      },
+      {
+        "k": "South Africa",
+        "v": 17,
+        "ph": 1
+      },
+      {
+        "k": "United Kingdom",
+        "v": 9,
+        "ph": 1
+      },
+      {
+        "k": "UAE",
+        "v": 8,
+        "ph": 1
+      },
+      {
+        "k": "Mauritius",
+        "v": 6,
+        "ph": 1
+      },
+      {
+        "k": "Other 19 countries",
+        "v": 19,
+        "ph": 1
+      }
     ]
   },
 
   /* ---- analysis ----
-     Pop-up text behind each "Analysis" button, keyed by the chart title. Remove an entry to remove the button. */
+  Pop-up text behind each "Analysis" button, keyed by the chart title. Remove an entry to remove the button. */
   "analysis": {
     "Scorecard: three pillars, fourteen domains": {
       "finding": "The pattern across the fourteen domains is consistent: the domains that measure rules, procedures and administration score highest, while those that measure what the economy actually produces, sells and retains score lowest. Trade Facilitation (77.8) and Investment Facilitation (75.0) sit at the top; Value Addition (22.9) and Pipeline and Conversion (31.3) sit at the bottom.",
@@ -691,7 +2165,7 @@ window.TII_DB = {
   },
 
   /* ---- comparisons ----
-     Domain comparison analysis matrix. One entry per pair of domains in the same pillar, keyed "domainA|domainB" in the order the domains are listed above. Every "reading" is exactly 35 words and every "implication" exactly 15 words, so the analysis panel is the same length for every pair; keep to those counts when editing. */
+  Domain comparison analysis matrix. One entry per pair of domains in the same pillar, keyed "domainA|domainB" in the order the domains are listed above. Every "reading" is exactly 35 words and every "implication" exactly 15 words, so the analysis panel is the same length for every pair; keep to those counts when editing. */
   "comparisons": {
     "5.1.1|5.1.2": {
       "reading": "The trade balance has improved faster than the export base beneath it. The narrower deficit reflects a gold-led surge in earnings, so external resilience rests on the same few commodities that hold export performance down.",
@@ -800,46 +2274,166 @@ window.TII_DB = {
   },
 
   /* ---- actions ----
-     Policy actions and the indicator codes each one is tracked against. */
+  Policy actions and the indicator codes each one is tracked against. */
   "actions": [
     {
       "group": "Trade Access and Export Competitiveness",
       "items": [
-        {"title": "Link paperless trade to legally binding dispute-resolution SLAs", "text": "Link paperless trade initiatives with administrative execution through legally binding 60-day operational SLAs and automated bilateral escalation protocols across all border authorities. This is expected to lift the non-tariff barrier SLA compliance rate from 0% and shorten the average inbound resolution time from 1,029 days.", "indicators": ["MA-06"]},
-        {"title": "Gazette the AfCFTA statutory instruments", "text": "Gazette the draft AfCFTA implementing regulations and integrate electronic certificates of origin into ASYCUDA World so that exporters can claim preferential tariffs. This is expected to lift preference utilisation from 0% towards a first milestone of 0.05% (about US$1.37 million in preference-claimed exports) and to convert the 97% tariff-line schedule into actual regional sales.", "indicators": ["MA-03", "MA-05"]},
-        {"title": "Expand the Authorised Economic Operator programme", "text": "Certify Zimbabwe’s top 50 exporting firms as trusted traders and use the larger pool to negotiate Mutual Recognition Agreements with regional customs authorities. This is expected to lift the certified pool from 15 firms, give exporters firm-level priority processing and lower their working-capital holding costs.", "indicators": ["MA-01"]},
-        {"title": "Raise the exporter foreign-currency retention rate", "text": "Move the share of foreign-currency earnings that exporters retain from 70% towards the 100% benchmark, starting with exporters that depend on imported inputs. This is expected to ease the working-capital squeeze on the 53.6% of formal manufacturing firms that rely on foreign-origin material inputs.", "indicators": ["TF-09"]},
-        {"title": "Complete digital SPS certification and standards harmonisation", "text": "Move e-Phyto / e-SPS Hub integration beyond its pilot phase and accelerate the harmonisation of national standards with regional standards, now at 2,400. This is expected to narrow the gap with Kenya and South Africa and to make certificates from Zimbabwe’s 47 accredited laboratories recognised at destination.", "indicators": ["ST-01", "ST-03"]},
-        {"title": "Redirect export promotion support", "text": "Direct market development support to the non-mineral product lines that already hold revealed comparative advantage and to the High-Potentials, whose global demand is already rising, rather than to mature minerals. This is expected to widen the export base and move the top-three share (75.5%) and the Theil index (6.57) towards their reform benchmarks, lowering exposure to commodity price shocks.", "indicators": ["TC-05", "TC-TCI"]},
-        {"title": "Defend the Vulnerables", "text": "Give industrial diamonds, nickel ores and concentrates, unwrought platinum, crude granite and unmanufactured cotton defensive support through domestic processing and market diversification. This is expected to preserve the comparative advantage these products still hold before weakening global demand or prices erodes it.", "indicators": ["TC-03"]}
+        {
+          "title": "Link paperless trade to legally binding dispute-resolution SLAs",
+          "text": "Link paperless trade initiatives with administrative execution through legally binding 60-day operational SLAs and automated bilateral escalation protocols across all border authorities. This is expected to lift the non-tariff barrier SLA compliance rate from 0% and shorten the average inbound resolution time from 1,029 days.",
+          "indicators": [
+            "MA-06"
+          ]
+        },
+        {
+          "title": "Gazette the AfCFTA statutory instruments",
+          "text": "Gazette the draft AfCFTA implementing regulations and integrate electronic certificates of origin into ASYCUDA World so that exporters can claim preferential tariffs. This is expected to lift preference utilisation from 0% towards a first milestone of 0.05% (about US$1.37 million in preference-claimed exports) and to convert the 97% tariff-line schedule into actual regional sales.",
+          "indicators": [
+            "MA-03",
+            "MA-05"
+          ]
+        },
+        {
+          "title": "Expand the Authorised Economic Operator programme",
+          "text": "Certify Zimbabwe’s top 50 exporting firms as trusted traders and use the larger pool to negotiate Mutual Recognition Agreements with regional customs authorities. This is expected to lift the certified pool from 15 firms, give exporters firm-level priority processing and lower their working-capital holding costs.",
+          "indicators": [
+            "MA-01"
+          ]
+        },
+        {
+          "title": "Raise the exporter foreign-currency retention rate",
+          "text": "Move the share of foreign-currency earnings that exporters retain from 70% towards the 100% benchmark, starting with exporters that depend on imported inputs. This is expected to ease the working-capital squeeze on the 53.6% of formal manufacturing firms that rely on foreign-origin material inputs.",
+          "indicators": [
+            "TF-09"
+          ]
+        },
+        {
+          "title": "Complete digital SPS certification and standards harmonisation",
+          "text": "Move e-Phyto / e-SPS Hub integration beyond its pilot phase and accelerate the harmonisation of national standards with regional standards, now at 2,400. This is expected to narrow the gap with Kenya and South Africa and to make certificates from Zimbabwe’s 47 accredited laboratories recognised at destination.",
+          "indicators": [
+            "ST-01",
+            "ST-03"
+          ]
+        },
+        {
+          "title": "Redirect export promotion support",
+          "text": "Direct market development support to the non-mineral product lines that already hold revealed comparative advantage and to the High-Potentials, whose global demand is already rising, rather than to mature minerals. This is expected to widen the export base and move the top-three share (75.5%) and the Theil index (6.57) towards their reform benchmarks, lowering exposure to commodity price shocks.",
+          "indicators": [
+            "TC-05",
+            "TC-TCI"
+          ]
+        },
+        {
+          "title": "Defend the Vulnerables",
+          "text": "Give industrial diamonds, nickel ores and concentrates, unwrought platinum, crude granite and unmanufactured cotton defensive support through domestic processing and market diversification. This is expected to preserve the comparative advantage these products still hold before weakening global demand or prices erodes it.",
+          "indicators": [
+            "TC-03"
+          ]
+        }
       ]
     },
     {
       "group": "Industrial Upgrading and Value Addition",
       "items": [
-        {"title": "Protect and deepen the Anchors", "text": "Move gold, nickel mattes, tobacco and ferro-chromium, which generate 90.9% of export earnings, up the value chain rather than expanding raw volumes. This is expected to raise the value captured from the products that already carry most of the export basket and to reduce reliance on raw extraction.", "indicators": ["VA-01"]},
-        {"title": "Build refining capacity and formalise artisanal gold supply", "text": "Establish an operational precious metals refinery and strengthen formal collection, traceability and access to processing for artisanal and small-scale miners, who deliver 74.6% of gold. This is expected to end the dependence on shipping intermediate matte to South Africa for final separation (refined platinum is 2.93% of PGM export revenue) and to bring more of the gold supply into formal value addition.", "indicators": ["MN-09", "MN-01"]},
-        {"title": "Introduce a raw mineral ore beneficiation levy", "text": "Apply a levy on raw ore exports that falls for producers who build local processing and smelting capacity, so that lithium, chrome and platinum group metals are processed in the country. This is expected to raise mineral local value retention from 32.0% and retain more jobs, supplier contracts and technology.", "indicators": ["MN-09", "MN-04"]},
-        {"title": "Adopt a tobacco processing export mandate", "text": "Require a defined share of the tobacco leaf crop to be processed domestically into cigarettes, cut rag and nicotine extracts. This is expected to lift the processed-to-raw agricultural export ratio from 0.14:1, capturing downstream manufacturing value and reducing raw leaf leakage (unmanufactured leaf exports were US$1.30 billion in 2025).", "indicators": ["VA-02"]},
-        {"title": "Provide solar and battery capital expenditure deductions", "text": "Allow firms to deduct the full cost of solar and battery installations against tax in the year of purchase. This is expected to cushion firms against the power outages that affect 52.5% of formal businesses (3.8 a month) and to reduce the effective industrial energy cost.", "indicators": ["EN-09", "EN-10"]},
-        {"title": "Establish an SME credit guarantee scheme", "text": "Establish a partial credit guarantee with a lower capital risk-weighting for loans directed to manufacturing capital expenditure. This is expected to unlock commercial bank liquidity for machinery and re-tooling, to raise bank credit access above the 23.1% of formal firms that report it today, and to reduce the 78.3% of fixed-asset investment funded from internal funds.", "indicators": ["FC-01", "FC-04"]}
+        {
+          "title": "Protect and deepen the Anchors",
+          "text": "Move gold, nickel mattes, tobacco and ferro-chromium, which generate 90.9% of export earnings, up the value chain rather than expanding raw volumes. This is expected to raise the value captured from the products that already carry most of the export basket and to reduce reliance on raw extraction.",
+          "indicators": [
+            "VA-01"
+          ]
+        },
+        {
+          "title": "Build refining capacity and formalise artisanal gold supply",
+          "text": "Establish an operational precious metals refinery and strengthen formal collection, traceability and access to processing for artisanal and small-scale miners, who deliver 74.6% of gold. This is expected to end the dependence on shipping intermediate matte to South Africa for final separation (refined platinum is 2.93% of PGM export revenue) and to bring more of the gold supply into formal value addition.",
+          "indicators": [
+            "MN-09",
+            "MN-01"
+          ]
+        },
+        {
+          "title": "Introduce a raw mineral ore beneficiation levy",
+          "text": "Apply a levy on raw ore exports that falls for producers who build local processing and smelting capacity, so that lithium, chrome and platinum group metals are processed in the country. This is expected to raise mineral local value retention from 32.0% and retain more jobs, supplier contracts and technology.",
+          "indicators": [
+            "MN-09",
+            "MN-04"
+          ]
+        },
+        {
+          "title": "Adopt a tobacco processing export mandate",
+          "text": "Require a defined share of the tobacco leaf crop to be processed domestically into cigarettes, cut rag and nicotine extracts. This is expected to lift the processed-to-raw agricultural export ratio from 0.14:1, capturing downstream manufacturing value and reducing raw leaf leakage (unmanufactured leaf exports were US$1.30 billion in 2025).",
+          "indicators": [
+            "VA-02"
+          ]
+        },
+        {
+          "title": "Provide solar and battery capital expenditure deductions",
+          "text": "Allow firms to deduct the full cost of solar and battery installations against tax in the year of purchase. This is expected to cushion firms against the power outages that affect 52.5% of formal businesses (3.8 a month) and to reduce the effective industrial energy cost.",
+          "indicators": [
+            "EN-09",
+            "EN-10"
+          ]
+        },
+        {
+          "title": "Establish an SME credit guarantee scheme",
+          "text": "Establish a partial credit guarantee with a lower capital risk-weighting for loans directed to manufacturing capital expenditure. This is expected to unlock commercial bank liquidity for machinery and re-tooling, to raise bank credit access above the 23.1% of formal firms that report it today, and to reduce the 78.3% of fixed-asset investment funded from internal funds.",
+          "indicators": [
+            "FC-01",
+            "FC-04"
+          ]
+        }
       ]
     },
     {
       "group": "Investment Conversion and Retention",
       "items": [
-        {"title": "Create a ZIDA post-licensing escalation unit", "text": "Establish a unit with enforceable service standards for land allocation, power grid connection and grievance resolution within 30 days for licensed investors. This is expected to raise investment conversion from 11.7%, lift grievance resolution from 20% and the three-year licence renewal rate from 54.73%, and turn $3.26 billion of licensed investment into operating plants.", "indicators": ["FD-13", "IF-04", "IF-03"]},
-        {"title": "Report licensed investment by funding source", "text": "Publish ZIDA-approved investment by funding type (cash, equipment and debt) and track conversion on a cash-equity basis. This is expected to show how much of the licensed pipeline is deployable capital, given that 86.5% of approved investment in the third quarter of 2025 was debt, and to bring the 1.85x debt-service-to-dividend ratio into investment decisions.", "indicators": ["FD-Cap", "FD-12"]},
-        {"title": "Tilt investment incentives towards processing and provinces outside Harare", "text": "Link investment incentives to manufacturing and mineral-processing projects and to locations outside Harare, including Special Economic Zones, and widen investor promotion beyond the current 24 source countries. This is expected to raise the Beneficiation Alignment Index from 0.28x, lift the share of investment outside Harare and Bulawayo from 38% towards 50%, and move the number of active investor countries towards the target of more than 40.", "indicators": ["IS-08", "IS-04", "IS-05"]},
-        {"title": "Introduce tiered profit-reinvestment tax relief", "text": "Reduce corporate income tax for firms that reinvest more of their annual profits in local plant expansion. This is expected to raise the net foreign capital retention index from 0.65 and deepen the productive capital stock.", "indicators": ["FD-11"]},
-        {"title": "Create a foreign dividend FX liquidity window", "text": "Establish a dedicated window to clear dividend and capital repatriation requests promptly. This is expected to shorten the 120-day repatriation wait towards the SADC benchmark of under 30 days, ease retention friction and support capital retention and reinvestment.", "indicators": ["FD-07"]}
+        {
+          "title": "Create a ZIDA post-licensing escalation unit",
+          "text": "Establish a unit with enforceable service standards for land allocation, power grid connection and grievance resolution within 30 days for licensed investors. This is expected to raise investment conversion from 11.7%, lift grievance resolution from 20% and the three-year licence renewal rate from 54.73%, and turn $3.26 billion of licensed investment into operating plants.",
+          "indicators": [
+            "FD-13",
+            "IF-04",
+            "IF-03"
+          ]
+        },
+        {
+          "title": "Report licensed investment by funding source",
+          "text": "Publish ZIDA-approved investment by funding type (cash, equipment and debt) and track conversion on a cash-equity basis. This is expected to show how much of the licensed pipeline is deployable capital, given that 86.5% of approved investment in the third quarter of 2025 was debt, and to bring the 1.85x debt-service-to-dividend ratio into investment decisions.",
+          "indicators": [
+            "FD-Cap",
+            "FD-12"
+          ]
+        },
+        {
+          "title": "Tilt investment incentives towards processing and provinces outside Harare",
+          "text": "Link investment incentives to manufacturing and mineral-processing projects and to locations outside Harare, including Special Economic Zones, and widen investor promotion beyond the current 24 source countries. This is expected to raise the Beneficiation Alignment Index from 0.28x, lift the share of investment outside Harare and Bulawayo from 38% towards 50%, and move the number of active investor countries towards the target of more than 40.",
+          "indicators": [
+            "IS-08",
+            "IS-04",
+            "IS-05"
+          ]
+        },
+        {
+          "title": "Introduce tiered profit-reinvestment tax relief",
+          "text": "Reduce corporate income tax for firms that reinvest more of their annual profits in local plant expansion. This is expected to raise the net foreign capital retention index from 0.65 and deepen the productive capital stock.",
+          "indicators": [
+            "FD-11"
+          ]
+        },
+        {
+          "title": "Create a foreign dividend FX liquidity window",
+          "text": "Establish a dedicated window to clear dividend and capital repatriation requests promptly. This is expected to shorten the 120-day repatriation wait towards the SADC benchmark of under 30 days, ease retention friction and support capital retention and reinvestment.",
+          "indicators": [
+            "FD-07"
+          ]
+        }
       ]
     }
   ],
 
   /* ---- peers ---- Regional comparator values parsed from each indicator's
-     comparator note. "dir" says which direction is better; "zim" is this
-     assessment's own reading. Edit freely: the peer chart reads only this block. */
+  comparator note. "dir" says which direction is better; "zim" is this
+  assessment's own reading. Edit freely: the peer chart reads only this block. */
   "peers": {
     "TC-01a": {
       "dir": "up",
@@ -1787,25 +3381,68 @@ window.TII_DB = {
       ]
     }
   },
+
   /* ---- nds2Indicators ----
-     Indicators from this assessment that also carry a Key Performance Indicator in the
-     NDS2 Results Framework 2026-30. This report reads 2025 data, so the comparator is
-     the framework's 2025 BASELINE, not a forward target. Progress is the standard
-     composite-indicator normalisation with min 0 and max the baseline:
-       higher-is-better  score = actual / baseline x 100   (capped at 100)
-       lower-is-better   score = baseline / actual x 100   (capped at 100)
-     "dir" says which way is better; "baselineV" is the number used in the arithmetic. */
+  Indicators from this assessment that also carry a Key Performance Indicator in the
+  NDS2 Results Framework 2026-30. This report reads 2025 data, so the comparator is
+  the framework's 2025 BASELINE, not a forward target. Progress is the standard
+  composite-indicator normalisation with min 0 and max the baseline:
+  higher-is-better  score = actual / baseline x 100   (capped at 100)
+  lower-is-better   score = baseline / actual x 100   (capped at 100)
+  "dir" says which way is better; "baselineV" is the number used in the arithmetic. */
   "nds2Indicators": [
-      {"code": "TC-01b", "kpi": "Annual Exports growth rate", "frame": "Image Building, International Relations and Trade", "baseline": "2.9%", "baselineV": 2.9, "dir": "up"},
-      {"code": "TC-TCI", "kpi": "Export Diversification (Theil Concentration Index)", "frame": "Inclusive Economic Growth and Structural Transformation", "baseline": "7.8", "baselineV": 7.8, "dir": "down"},
-      {"code": "MF-02", "kpi": "Manufacturing Value Added as a percentage of GDP", "frame": "Inclusive Economic Growth and Structural Transformation", "baseline": "15.3%", "baselineV": 15.3, "dir": "up"},
-      {"code": "MF-07", "kpi": "Manufacturing sector growth rate", "frame": "Inclusive Economic Growth and Structural Transformation", "baseline": "2.8%", "baselineV": 2.8, "dir": "up"},
-      {"code": "MF-09", "kpi": "Manufacturing Employment as a proportion of Total Employment", "frame": "Inclusive Economic Growth and Structural Transformation", "baseline": "7%", "baselineV": 7, "dir": "up"},
-      {"code": "FD-01", "kpi": "Total FDI inflows (US$ million)", "frame": "Image Building, International Relations and Trade", "baseline": "US$465.43 mn", "baselineV": 465.43, "dir": "up"}
-    ],
+    {
+      "code": "TC-01b",
+      "kpi": "Annual Exports growth rate",
+      "frame": "Image Building, International Relations and Trade",
+      "baseline": "2.9%",
+      "baselineV": 2.9,
+      "dir": "up"
+    },
+    {
+      "code": "TC-TCI",
+      "kpi": "Export Diversification (Theil Concentration Index)",
+      "frame": "Inclusive Economic Growth and Structural Transformation",
+      "baseline": "7.8",
+      "baselineV": 7.8,
+      "dir": "down"
+    },
+    {
+      "code": "MF-02",
+      "kpi": "Manufacturing Value Added as a percentage of GDP",
+      "frame": "Inclusive Economic Growth and Structural Transformation",
+      "baseline": "15.3%",
+      "baselineV": 15.3,
+      "dir": "up"
+    },
+    {
+      "code": "MF-07",
+      "kpi": "Manufacturing sector growth rate",
+      "frame": "Inclusive Economic Growth and Structural Transformation",
+      "baseline": "2.8%",
+      "baselineV": 2.8,
+      "dir": "up"
+    },
+    {
+      "code": "MF-09",
+      "kpi": "Manufacturing Employment as a proportion of Total Employment",
+      "frame": "Inclusive Economic Growth and Structural Transformation",
+      "baseline": "7%",
+      "baselineV": 7,
+      "dir": "up"
+    },
+    {
+      "code": "FD-01",
+      "kpi": "Total FDI inflows (US$ million)",
+      "frame": "Image Building, International Relations and Trade",
+      "baseline": "US$465.43 mn",
+      "baselineV": 465.43,
+      "dir": "up"
+    }
+  ],
 
   /* ---- indicators ----
-     The 95 scored indicators. "score" (0-100) and "weight" drive every domain, pillar and index score on the dashboard: domain = sum of weight x score; pillar = average of its domains; index = average of the pillars. */
+  The 95 scored indicators. "score" (0-100) and "weight" drive every domain, pillar and index score on the dashboard: domain = sum of weight x score; pillar = average of its domains; index = average of the pillars. */
   "indicators": [
     {
       "domain": "5.1.1",

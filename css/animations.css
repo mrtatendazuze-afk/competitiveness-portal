@@ -1,0 +1,78 @@
+/* ZCR Intelligence — transition & motion layer */
+@keyframes zcrPageIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes zcrPageOut{to{opacity:0;transform:translateY(-8px)}}
+@keyframes zcrRise{from{opacity:0;transform:translateY(18px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes zcrGrowX{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes zcrGrowY{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes zcrFade{from{opacity:0}to{opacity:1}}
+#page.zcr-out{animation:zcrPageOut .18s ease forwards}
+#page.zcr-in{animation:zcrPageIn .45s cubic-bezier(.2,.7,.2,1) both}
+#page.zcr-in > *{animation:zcrRise .55s cubic-bezier(.2,.7,.2,1) both}
+#page.zcr-in > *:nth-child(1){animation-delay:.04s}#page.zcr-in > *:nth-child(2){animation-delay:.09s}
+#page.zcr-in > *:nth-child(3){animation-delay:.14s}#page.zcr-in > *:nth-child(4){animation-delay:.19s}
+#page.zcr-in > *:nth-child(5){animation-delay:.24s}#page.zcr-in > *:nth-child(n+6){animation-delay:.29s}
+.zcr-anim [style*="width:"]:not(span):not(svg){transform-origin:left center;animation:zcrGrowX .8s cubic-bezier(.2,.7,.2,1) both .15s}
+.zcr-anim [style*="height:"]:not(span):not(svg):not(img){transform-origin:bottom center;animation:zcrGrowY .8s cubic-bezier(.2,.7,.2,1) both .15s}
+.zcr-anim svg circle,.zcr-anim svg path{animation:zcrFade .7s ease both .2s}
+.nav a{transition:background .25s ease,color .25s ease,transform .2s ease}
+.nav a:hover{transform:translateX(3px)}
+.card,.kpi,[class*="card"]{transition:transform .25s ease,box-shadow .25s ease}
+.kpi:hover{transform:translateY(-3px);box-shadow:0 12px 28px -16px rgba(0,0,0,.25)}
+#drawer{transition:transform .38s cubic-bezier(.2,.7,.2,1),opacity .3s ease !important}
+#scrim{transition:opacity .3s ease !important}
+#tip{transition:opacity .15s ease}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* ---------- Hover layer: cards lift; charts replay and respond to the pointer ---------- */
+@keyframes zcrPop{0%{transform:scale(.6);opacity:.4}100%{transform:scale(1);opacity:1}}
+@keyframes zcrSeg{from{clip-path:inset(0 100% 0 0 round 999px)}to{clip-path:inset(0 0 0 0 round 999px)}}
+@keyframes zcrRing{from{stroke-dashoffset:260}to{stroke-dashoffset:0}}
+.fig,.kpi,.kf-i,.dt,.acc,.cmp-s,.cite,.note,.pillars > div,.quad .q,.h2-stats > div{transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s ease,background .2s ease}
+.hb .bar,.strip .bar,.pg .tr span,.cols .b,.sbar div,.scat .pt,.minibar span,.dv .s{transition:transform .22s ease,opacity .22s ease,filter .22s ease}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+  .fig:hover,.acc:hover,.cite:hover,.note:hover{transform:translateY(-4px);box-shadow:0 22px 44px -26px rgba(18,20,19,.38)}
+  .kpi:hover,.pillars > div:hover{transform:translateY(-5px);box-shadow:0 20px 38px -22px rgba(18,20,19,.4)}
+  .kf-i:hover,.dt:hover,.cmp-s:hover,.quad .q:hover{transform:translateY(-3px);box-shadow:0 14px 26px -18px rgba(18,20,19,.35)}
+  .h2-stats > div:hover{transform:translateX(-4px);background:#343c38}
+  .kf-i:hover .kf-n{background:var(--lime);color:var(--dark)}
+  .kpi:hover .v{letter-spacing:-.02em}
+  .pillars > div:hover .arrow,.chap:hover .arrow{transform:rotate(45deg) scale(1.08)}
+  .arrow{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
+  /* charts replay when the pointer enters their card */
+  .fig:hover .hb .bar,.fig:hover .strip .bar,.fig:hover .pg .tr span,.fig:hover .dv .s,.dt:hover .minibar span,.cmp-s:hover .minibar span,.kf-i:hover .minibar span{transform-origin:left center;animation:zcrGrowX .7s cubic-bezier(.2,.7,.2,1) both}
+  .fig:hover .hb > .tr:nth-of-type(3n+2) .bar{animation-delay:.04s}
+  .fig:hover .cols .b{transform-origin:bottom center;animation:zcrGrowY .7s cubic-bezier(.2,.7,.2,1) both}
+  .fig:hover .cols.down .b{transform-origin:top center}
+  .fig:hover .cols .c:nth-child(2) .b{animation-delay:.05s}.fig:hover .cols .c:nth-child(3) .b{animation-delay:.1s}
+  .fig:hover .cols .c:nth-child(4) .b{animation-delay:.15s}.fig:hover .cols .c:nth-child(5) .b{animation-delay:.2s}
+  .fig:hover .sbar div{animation:zcrSeg .7s cubic-bezier(.2,.7,.2,1) both}
+  .fig:hover .sbar div:nth-child(2){animation-delay:.08s}.fig:hover .sbar div:nth-child(3){animation-delay:.16s}
+  .fig:hover .sbar div:nth-child(4){animation-delay:.24s}.fig:hover .sbar div:nth-child(5){animation-delay:.32s}
+  .fig:hover .scat .pt{animation:zcrPop .5s ease both}
+  .hero2:hover .ring circle:last-child{stroke-dashoffset:0;animation:zcrRing .9s cubic-bezier(.2,.7,.2,1) both}
+  /* pointing at one mark lifts it and quietens the rest */
+  .hb:has(.tr:hover) .tr:not(:hover) .bar,.strip:has(.tr:hover) .tr:not(:hover) .bar{opacity:.4}
+  .hb .tr:hover .bar,.strip .tr:hover .bar{transform:scaleY(1.3);filter:saturate(1.15)}
+  .cols:has(.c:hover) .c:not(:hover) .b{opacity:.4}
+  .cols .c:hover .b{transform:translateY(-5px)}
+  .cols.down .c:hover .b{transform:translateY(5px)}
+  .sbar:has(div:hover) div:not(:hover){opacity:.45}
+  .sbar div:hover{transform:scaleY(1.12)}
+  .scat .pt:hover{transform:translate(-50%,50%) scale(1.9);opacity:1;z-index:2}
+  .pg .tr:hover span{filter:saturate(1.2) brightness(1.05)}
+}
+
+@keyframes zcrWipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 -5% 0 0)}}
+@keyframes zcrSpin{from{transform:rotate(-200deg);opacity:.2}to{transform:rotate(-90deg);opacity:1}}
+.zcr-anim .ln-p svg{animation:zcrWipe 1s cubic-bezier(.2,.7,.2,1) both .15s}
+.zcr-anim .dn-c svg{animation:zcrSpin .9s cubic-bezier(.2,.7,.2,1) both .1s}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+  .fig:hover .ln-p svg{animation:zcrWipe .9s cubic-bezier(.2,.7,.2,1) both}
+  .fig:hover .ln-d{animation:zcrPop .45s ease both .35s}
+  .ln-d:hover{transform:scale(1.5)}
+  .fig:hover .dn-c svg{animation:zcrSpin .8s cubic-bezier(.2,.7,.2,1) both}
+  .dn-c:has(.dn-s:hover) .dn-s:not(:hover){opacity:.4}
+  .dn-s:hover{stroke-width:19}
+  .fig:hover .hb.lolli .bar{transform-origin:left center}
+  .qfx-g > div:hover{background:rgba(255,255,255,.78);transform:translateY(-3px)}
+}

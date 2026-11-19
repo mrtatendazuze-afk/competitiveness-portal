@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trade, Industry &amp; Investment Competitiveness · Zimbabwe 2026</title>
+<meta name="description" content="Zimbabwe's Trade, Industry and Investment Competitiveness Index 2026: overall score, three pillars, fourteen domains and 95 indicators, with charts, comparisons and downloadable data.">
+<meta property="og:title" content="Trade, Industry &amp; Investment Competitiveness · Zimbabwe 2026">
+<meta property="og:description" content="Scores for trade, industry and investment competitiveness across 14 domains and 95 indicators.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1d2321">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+<a class="skip" href="#page">Skip to content</a>
+<div class="app">
+  <aside class="side" id="side" aria-label="Report navigation">
+    <div class="brand">
+      <img src="assets/ncc-logo.png" alt="National Competitiveness Commission — Enhancing Zimbabwe's Global Competitiveness" width="440" height="201">
+    </div>
+    <div class="sx" id="sideIdx"></div>
+    <nav class="nav" id="nav"></nav>
+    <div class="side-foot"><div class="org"><i class="flag"></i><b>National Competitiveness Commission</b></div>Republic of Zimbabwe</div>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <button class="icb menu-btn" id="menuBtn" aria-label="Open navigation" aria-controls="side" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <div class="hello">
+        <div><small>Trade, Industry &amp; Investment Competitiveness Index</small><div class="crumbs" id="crumbs"></div></div>
+      </div>
+      <span class="datep" id="asOf"></span>
+      <span class="who" id="who" hidden></span>
+      <button class="btn" id="csvBtn" title="Download the indicator set as CSV">Download data</button>
+      <button class="icb" onclick="window.print()" aria-label="Print"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg></button>
+    </header>
+    <div class="scen" id="scen">
+      <span><b>Scenario mode</b> · <span id="scenTxt"></span></span>
+      <button class="btn" id="scenReset">Reset to baseline</button>
+    </div>
+    <main class="page" id="page" tabindex="-1"></main>
+    <footer class="foot"><span>© 2026 National Competitiveness Commission · Republic of Zimbabwe</span><span>Zimbabwe Competitiveness Report 2026 · scores on a 0–100 scale</span></footer>
+  </div>
+</div>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dTitle">
+  <button class="x" id="dClose" aria-label="Close">&times;</button>
+  <div class="dh"><div class="code" id="dCode"></div><h3 id="dTitle"></h3></div>
+  <div class="db" id="dBody"></div>
+</div>
+<div class="scrim" id="scrim"></div>
+<div class="scrim" id="navScrim"></div>
+<div class="scrim" id="anScrim"></div>
+<div class="an-modal" id="anModal" role="dialog" aria-modal="true" aria-labelledby="anTitle">
+  <button class="x" id="anClose" aria-label="Close">&times;</button>
+  <span class="an-tag" id="anTag">Competitiveness Analysis</span>
+  <h3 id="anTitle"></h3>
+  <div id="anBody"></div>
+</div>
+<div id="tip"></div>
+<div class="gate" id="gate" hidden>
+  <div class="gate-card">
+    <img class="gate-logo" src="assets/ncc-logo.png" alt="National Competitiveness Commission">
+    <h1>Competitiveness Knowledge Portal</h1>
+    <p class="gate-sub">Sign in to open the portal.</p>
+    <form id="gateForm" autocomplete="off">
+      <label for="gu">Username</label>
+      <input id="gu" name="gu" type="text" autocapitalize="none" spellcheck="false" required>
+      <label for="gp">Password</label>
+      <input id="gp" name="gp" type="password" required>
+      <p class="gate-err" id="gateErr" hidden role="alert"></p>
+      <button class="gate-go" type="submit">Sign in</button>
+    </form>
+    <div class="gate-accts" id="gateAccts">
+      <small>Demonstration accounts — select one to fill the form</small>
+      <div>
+        <button type="button" data-u="admin"><b>admin</b><span>Administrator</span></button>
+        <button type="button" data-u="staff"><b>staff</b><span>NCC Staff</span></button>
+        <button type="button" data-u="institution"><b>institution</b><span>Partner Institution</span></button>
+        <button type="button" data-u="student"><b>student</b><span>Student or Public</span></button>
+      </div>
+    </div>
+    <p class="gate-note">This sign-in demonstrates how the portal looks to different users. It is not security: the portal is a static site, so these accounts are readable in the page source. Everything behind it is already public data.</p>
+  </div>
+</div>
+
+<script src="data/database.js"></script>
+<script src="js/data.js"></script>
+<script src="js/core.js"></script>
+<script src="js/app.js"></script>
+<script src="js/editor.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/transitions.js"></script>
+</body></html>
